@@ -1,0 +1,51 @@
+syntax = "proto3";
+option java_package = "com.xiaoshu.im";
+option java_outer_classname = "MessageInfo";
+package rosa.im.protobuf;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.MessageOptions {
+    string version = 51234;
+}
+
+// 每次修改协议，请升级这个版本号
+message Version {
+    option (version) = "1.0.0";
+}
+
+// 图片透传，协议说明；
+message Message {
+    string g_id = 1; // 消息的唯一标识
+    Type type = 2; // 消息所属的会话的类型
+    MessageContent message_content = 3; // 消息实体
+    string protocol_version = 4; // 协议版本号
+
+    // 会话类型
+    enum Type {
+        FILE = 0; // 数据传输
+        PING = 1; // 心跳命令-发送
+        PONG = 2; // 心跳命令-回复
+        AUTH = 3; // 鉴权信息
+    }
+}
+// 消息体信息
+message MessageContent {
+    string content_type = 1;
+    google.protobuf.Any content = 2; // 消息实体的payload
+}
+
+message File {
+    string to = 1;  // 接收端clientId
+    bytes data = 2; // 文件内容
+    string name = 3; // 文件名
+    uint64 size = 4; // 文件大小
+    string type = 5; // 文件类型
+}
+
+message Authorization {
+    string c_id = 1; // 客户端Id( Unique Client Id)
+    string name = 2; // 用户名称
+    string password = 3; //密码
+}
