@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * <p>
  * Original @Author: deane.jia-贾亮亮,@2021/2/9@11:08
  * <p>
- * Copyright (C)2012-@2021 深圳优必选科技 All rights reserved.
+ * Copyright (C)2012-@2021 小树盛凯科技 All rights reserved.
  */
 @Slf4j
 @RestController
