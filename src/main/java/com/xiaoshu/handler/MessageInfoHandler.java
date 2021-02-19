@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
- * 功能说明：
+ * 功能说明： 具体的业务逻辑处理类实现；
  *
  * @ com.xiaoshu.handler
  * <p>

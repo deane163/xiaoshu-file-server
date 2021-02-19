@@ -1,8 +1,10 @@
 package com.xiaoshu;
 
+import com.xiaoshu.server.TcpServer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * 功能说明： 实现一个基于Netty框架的图传服务；
@@ -20,8 +22,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class XiaoshuFileServerApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(XiaoshuFileServerApplication.class, args);
+    /**
+     * 启动Spring服务，并启动Netty Server服务，接收客户端的文件发送
+     *
+     * @param args
+     * @throws InterruptedException
+     */
+    public static void main(String[] args) throws InterruptedException {
+        ConfigurableApplicationContext context = SpringApplication.run(XiaoshuFileServerApplication.class, args);
+        TcpServer tcpServer = context.getBean(TcpServer.class);
+        tcpServer.start(8888);
     }
 
 }

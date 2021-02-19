@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 功能说明：
+ * 功能说明： 用于控制使用，例如踢出用户登录状态，获得用户当前登录状态等；
  *
  * @ com.xiaoshu.controller
  * <p>

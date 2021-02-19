@@ -1,10 +1,10 @@
 package com.xiaoshu.client;
 
+import cn.hutool.core.io.FileUtil;
 import com.google.protobuf.Any;
 import com.google.protobuf.ByteString;
 import com.xiaoshu.client.handler.TestImClientChannelInitializer;
 import com.xiaoshu.im.MessageInfo;
-import com.xiaoshu.util.IoUtils;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -87,7 +87,7 @@ public class TcpClient {
         MessageInfo.MessageContent.Builder contentBuilder = MessageInfo.MessageContent.newBuilder();
 
         MessageInfo.File.Builder fileBuilder = MessageInfo.File.newBuilder();
-        byte[] conBytes = IoUtils.getBytesByFile("D:/temp/image.jpg");
+        byte[] conBytes = FileUtil.readBytes("D:/temp/image.jpg");
         fileBuilder.setData(ByteString.copyFrom(conBytes));
         fileBuilder.setTo("6");
         // 设置内容信息

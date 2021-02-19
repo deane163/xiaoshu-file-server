@@ -1,10 +1,10 @@
 package com.xiaoshu.protobuf;
 
+import cn.hutool.core.io.FileUtil;
 import com.google.protobuf.Any;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.xiaoshu.im.MessageInfo;
-import com.xiaoshu.util.IoUtils;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -28,7 +28,7 @@ public class TestMessageInfo {
         MessageInfo.MessageContent.Builder contentBuilder = MessageInfo.MessageContent.newBuilder();
 
         MessageInfo.File.Builder fileBuilder = MessageInfo.File.newBuilder();
-        byte[] conBytes = IoUtils.getBytesByFile("D:/temp/image.jpg");
+        byte[] conBytes = FileUtil.readBytes("D:/temp/image.jpg");
         fileBuilder.setData(ByteString.copyFrom(conBytes));
         fileBuilder.setTo("6");
         // 设置内容信息
