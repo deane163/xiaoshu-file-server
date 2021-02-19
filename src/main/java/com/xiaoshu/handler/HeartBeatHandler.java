@@ -1,10 +1,14 @@
 package com.xiaoshu.handler;
 
+import cn.hutool.core.util.StrUtil;
+import com.xiaoshu.component.ChannelRepository;
 import com.xiaoshu.im.MessageInfo;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.util.ReferenceCountUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -22,6 +26,9 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class HeartBeatHandler extends SimpleChannelInboundHandler<MessageInfo.Message> {
 
+    @Autowired
+    private ChannelRepository channelRepository;
+
     /**
      * 空闲触发器 心跳基于空闲实现
      *
@@ -37,6 +44,16 @@ public class HeartBeatHandler extends SimpleChannelInboundHandler<MessageInfo.Me
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageInfo.Message msg) throws Exception {
         // 将数据转发到下一个Handler进行处理
-        ctx.fireChannelRead(msg);
+        if (msg.getType().equals(MessageInfo.Message.Type.AUTH)) {
+            MessageInfo.Authorization authorization = msg.getMessageContent().getContent().unpack(MessageInfo.Authorization.class);
+            String clientId = authorization.getCId();
+            if (StrUtil.isNotEmpty(clientId)) {
+                log.info("[添加Channel]clientId:{} 添加客户端Channel:{}", clientId, ctx.channel().remoteAddress());
+                channelRepository.put(clientId, ctx.channel());
+            }
+        } else {
+            ctx.fireChannelRead(msg);
+        }
+        ReferenceCountUtil.release(msg);
     }
 }

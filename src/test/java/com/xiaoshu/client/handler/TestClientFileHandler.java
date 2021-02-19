@@ -1,5 +1,6 @@
 package com.xiaoshu.client.handler;
 
+import cn.hutool.core.io.FileUtil;
 import com.xiaoshu.im.MessageInfo;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -20,6 +21,11 @@ public class TestClientFileHandler extends SimpleChannelInboundHandler<MessageIn
         System.out.println("================================================================>");
         System.out.println("[客户端]接收到数据信息:" + msg.getGId());
         System.out.println("[客户端]接收到数据信息:" + msg.getType().toString());
-        ctx.fireChannelRead(msg);
+        if (msg.getType().equals(MessageInfo.Message.Type.FILE)) {
+            MessageInfo.File file = msg.getMessageContent().getContent().unpack(MessageInfo.File.class);
+            String destFileName = "D:/temp/image_" + System.currentTimeMillis() + ".jpg";
+            FileUtil.writeBytes(file.getData().toByteArray(), destFileName);
+            System.out.println("将图片保存到本地磁盘中");
+        }
     }
 }

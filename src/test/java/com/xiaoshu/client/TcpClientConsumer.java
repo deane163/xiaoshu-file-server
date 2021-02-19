@@ -1,8 +1,6 @@
 package com.xiaoshu.client;
 
-import cn.hutool.core.io.FileUtil;
 import com.google.protobuf.Any;
-import com.google.protobuf.ByteString;
 import com.xiaoshu.client.handler.TestImClientChannelInitializer;
 import com.xiaoshu.im.MessageInfo;
 import io.netty.bootstrap.Bootstrap;
@@ -14,7 +12,7 @@ import lombok.Getter;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 功能说明：
+ * 功能说明： 接收客户端的图片数据
  *
  * @ com.xiaoshu.client
  * <p>
@@ -22,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * Copyright (C)2012-@2021 小树盛凯科技 All rights reserved.
  */
-public class TcpClient {
+public class TcpClientConsumer {
 
     @Getter
     private static Channel clientChannel;
@@ -32,7 +30,7 @@ public class TcpClient {
     }
 
     /***
-     * 进行连接操作， 并发送测试图片使用；
+     * 进行连接操作， 接收发送端发送的图片信息；
      * @param address
      * @param port
      */
@@ -43,12 +41,11 @@ public class TcpClient {
         bootstrap.option(ChannelOption.SO_KEEPALIVE, true)
                 .option(ChannelOption.TCP_NODELAY, true)
                 .handler(new TestImClientChannelInitializer());
-        // 创建连接
         try{
             ChannelFuture channelFuture = bootstrap.connect(address, port);
             clientChannel = channelFuture.channel();
-            // 测试发送消息
-            clientChannel.writeAndFlush(createMessage());
+            clientChannel.writeAndFlush(createAuthMessage());
+            // 添加断线重连功能实现；
             channelFuture.addListener((ChannelFuture futureListener)->{
                 EventLoop eventLoop = futureListener.channel().eventLoop();
                 if(!futureListener.isSuccess()){
@@ -71,26 +68,24 @@ public class TcpClient {
      * @throws InterruptedException
      */
     public static void main(String[] args) throws InterruptedException {
-        TcpClient.start("127.0.0.1", 28888);
+        TcpClientConsumer.start("127.0.0.1", 28888);
     }
 
     /**
      * 创建protobuf类型Message
      * @return
      */
-    private static MessageInfo.Message createMessage(){
+    private static MessageInfo.Message createAuthMessage() {
         MessageInfo.Message.Builder builder = MessageInfo.Message.newBuilder();
-        builder.setGId(System.currentTimeMillis() + "000000");
-        builder.setType(MessageInfo.Message.Type.FILE);
+        builder.setGId("000000" + System.currentTimeMillis());
+        builder.setType(MessageInfo.Message.Type.AUTH);
 
         MessageInfo.MessageContent.Builder contentBuilder = MessageInfo.MessageContent.newBuilder();
 
-        MessageInfo.File.Builder fileBuilder = MessageInfo.File.newBuilder();
-        byte[] conBytes = FileUtil.readBytes("D:/temp/image.jpg");
-        fileBuilder.setData(ByteString.copyFrom(conBytes));
-        fileBuilder.setTo("6");
+        MessageInfo.Authorization.Builder authorization = MessageInfo.Authorization.newBuilder();
+        authorization.setCId("6");
         // 设置内容信息
-        contentBuilder.setContent(Any.pack(fileBuilder.build()));
+        contentBuilder.setContent(Any.pack(authorization.build()));
         builder.setMessageContent(contentBuilder.build());
         MessageInfo.Message message = builder.build();
         return message;

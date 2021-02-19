@@ -1,11 +1,13 @@
 package com.xiaoshu.handler;
 
-import cn.hutool.core.io.FileUtil;
+import com.xiaoshu.component.ChannelRepository;
 import com.xiaoshu.im.MessageInfo;
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -21,6 +23,9 @@ import org.springframework.stereotype.Component;
 @ChannelHandler.Sharable
 @Slf4j
 public class MessageInfoHandler extends SimpleChannelInboundHandler<MessageInfo.Message> {
+
+    @Autowired
+    private ChannelRepository channelRepository;
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -45,7 +50,10 @@ public class MessageInfoHandler extends SimpleChannelInboundHandler<MessageInfo.
         log.info("[Handler Message] handler with message :{}", msg);
         if (msg.getType().equals(MessageInfo.Message.Type.FILE)) {
             MessageInfo.File file = msg.getMessageContent().getContent().unpack(MessageInfo.File.class);
-            FileUtil.writeBytes(file.getData().toByteArray(), "D:/temp/image_" + System.currentTimeMillis() + ".jpg");
+            String clientId = file.getTo();
+            Channel clientChannel = channelRepository.get(clientId);
+            log.info("[发送消息到客户端]:{}", clientChannel.remoteAddress());
+            clientChannel.writeAndFlush(msg);
         }
     }
 
