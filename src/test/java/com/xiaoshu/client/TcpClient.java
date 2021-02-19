@@ -32,7 +32,7 @@ public class TcpClient {
     }
 
     /***
-     * 进行连接操作
+     * 进行连接操作， 并发送测试图片使用；
      * @param address
      * @param port
      */
@@ -63,7 +63,6 @@ public class TcpClient {
         } finally {
             workerGroup.shutdownGracefully();
         }
-
     }
 
     /**

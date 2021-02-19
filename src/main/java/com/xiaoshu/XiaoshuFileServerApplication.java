@@ -12,6 +12,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * （2） 保持心跳信息；
  * （3） 使用protobuf消息编解码器；
  *
+ * 参考： https://gitee.com/zjz0812/heart-netty
  * @ com.xiaoshu
  * <p>
  * Original @Author: deane.jia-贾亮亮,@2021/2/9@11:08
@@ -31,7 +32,7 @@ public class XiaoshuFileServerApplication {
     public static void main(String[] args) throws InterruptedException {
         ConfigurableApplicationContext context = SpringApplication.run(XiaoshuFileServerApplication.class, args);
         TcpServer tcpServer = context.getBean(TcpServer.class);
-        tcpServer.start(8888);
+        tcpServer.start(28888);
     }
 
 }
