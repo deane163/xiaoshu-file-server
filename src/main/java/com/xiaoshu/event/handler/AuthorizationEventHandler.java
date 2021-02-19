@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
  * <p>
  * Original @Author: deane.jia-贾亮亮,@2021/2/19@17:32
  * <p>
- * Copyright (C)2012-@2021 深圳优必选科技 All rights reserved.
+ * Copyright (C)2012-@2021 小树盛凯科技 All rights reserved.
  */
 @Component
 @Slf4j

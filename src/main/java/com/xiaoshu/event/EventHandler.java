@@ -10,7 +10,7 @@ import io.netty.channel.ChannelHandlerContext;
  * <p>
  * Original @Author: deane.jia-贾亮亮,@2021/2/19@16:50
  * <p>
- * Copyright (C)2012-@2021 深圳优必选科技 All rights reserved.
+ * Copyright (C)2012-@2021 小树盛凯科技 All rights reserved.
  */
 public interface EventHandler {
     /**
