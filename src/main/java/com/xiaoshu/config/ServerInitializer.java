@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * 功能说明：
+ * 功能说明：封装启动类  ServerBootstrap
  *
  * @ com.xiaoshu.config
  * <p>

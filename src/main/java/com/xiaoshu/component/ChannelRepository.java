@@ -56,6 +56,11 @@ public class ChannelRepository {
     }
 
 
+    /**
+     * 判断Channel是否已经存在
+     * @param channel
+     * @return
+     */
     public boolean isChannelExists(Channel channel) {
         AtomicBoolean flag = new AtomicBoolean(false);
         channelCache.forEach((key, value) -> {
