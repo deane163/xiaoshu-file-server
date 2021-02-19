@@ -3,7 +3,6 @@ package com.xiaoshu.server.handler;
 import com.xiaoshu.im.MessageInfo;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.util.ReferenceCountUtil;
 
 /**
  * 功能说明：

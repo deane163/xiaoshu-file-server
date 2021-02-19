@@ -21,7 +21,7 @@ import io.netty.handler.logging.LoggingHandler;
  */
 public class TcpServer {
 
-    public static void start(int port){
+    public static void start(int port) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         // 编写启动方法
@@ -34,9 +34,9 @@ public class TcpServer {
                     .childHandler(new TestImServerChannelInitializer());
             ChannelFuture future = serverBootstrap.bind(port).sync();
             future.channel().closeFuture().sync();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }

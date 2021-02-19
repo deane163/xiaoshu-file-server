@@ -4,4464 +4,4709 @@
 package com.xiaoshu.im;
 
 public final class MessageInfo {
-  private MessageInfo() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-    registry.add(MessageInfo.version);
-  }
+    public static final int VERSION_FIELD_NUMBER = 51234;
+    /**
+     * <code>extend .google.protobuf.MessageOptions { ... }</code>
+     */
+    public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+            com.google.protobuf.DescriptorProtos.MessageOptions,
+            String> version = com.google.protobuf.GeneratedMessage
+            .newFileScopedGeneratedExtension(
+                    String.class,
+                    null);
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_rosa_im_protobuf_Version_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_rosa_im_protobuf_Version_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_rosa_im_protobuf_Message_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_rosa_im_protobuf_Message_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_rosa_im_protobuf_MessageContent_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_rosa_im_protobuf_File_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_rosa_im_protobuf_File_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_rosa_im_protobuf_Authorization_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable;
+    private static com.google.protobuf.Descriptors.FileDescriptor
+            descriptor;
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface VersionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.Version)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * <pre>
-   * 每次修改协议，请升级这个版本号
-   * </pre>
-   *
-   * Protobuf type {@code rosa.im.protobuf.Version}
-   */
-  public  static final class Version extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:rosa.im.protobuf.Version)
-      VersionOrBuilder {
-    // Use Version.newBuilder() to construct.
-    private Version(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Version() {
-    }
-
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private Version(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return MessageInfo.internal_static_rosa_im_protobuf_Version_descriptor;
-    }
-
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return MessageInfo.internal_static_rosa_im_protobuf_Version_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Version.class, Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Version)) {
-        return super.equals(obj);
-      }
-      Version other = (Version) obj;
-
-      boolean result = true;
-      return result;
+    static {
+        String[] descriptorData = {
+                "\n\021MessageInfo.proto\022\020rosa.im.protobuf\032\031g" +
+                        "oogle/protobuf/any.proto\032 google/protobu" +
+                        "f/descriptor.proto\"\024\n\007Version:\t\222\202\031\0051.0.0" +
+                        "\"\312\001\n\007Message\022\014\n\004g_id\030\001 \001(\t\022,\n\004type\030\002 \001(\016" +
+                        "2\036.rosa.im.protobuf.Message.Type\0229\n\017mess" +
+                        "age_content\030\003 \001(\0132 .rosa.im.protobuf.Mes" +
+                        "sageContent\022\030\n\020protocol_version\030\004 \001(\t\".\n" +
+                        "\004Type\022\010\n\004FILE\020\000\022\010\n\004PING\020\001\022\010\n\004PONG\020\002\022\010\n\004A" +
+                        "UTH\020\003\"M\n\016MessageContent\022\024\n\014content_type\030" +
+                        "\001 \001(\t\022%\n\007content\030\002 \001(\0132\024.google.protobuf",
+                ".Any\"J\n\004File\022\n\n\002to\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\022\014" +
+                        "\n\004name\030\003 \001(\t\022\014\n\004size\030\004 \001(\004\022\014\n\004type\030\005 \001(\t" +
+                        "\"=\n\rAuthorization\022\014\n\004c_id\030\001 \001(\t\022\014\n\004name\030" +
+                        "\002 \001(\t\022\020\n\010password\030\003 \001(\t:2\n\007version\022\037.goo" +
+                        "gle.protobuf.MessageOptions\030\242\220\003 \001(\tB\035\n\016c" +
+                        "om.xiaoshu.imB\013MessageInfob\006proto3"
+        };
+        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+                new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+                    public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                            com.google.protobuf.Descriptors.FileDescriptor root) {
+                        descriptor = root;
+                        return null;
+                    }
+                };
+        com.google.protobuf.Descriptors.FileDescriptor
+                .internalBuildGeneratedFileFrom(descriptorData,
+                        new com.google.protobuf.Descriptors.FileDescriptor[]{
+                                com.google.protobuf.AnyProto.getDescriptor(),
+                                com.google.protobuf.DescriptorProtos.getDescriptor(),
+                        }, assigner);
+        internal_static_rosa_im_protobuf_Version_descriptor =
+                getDescriptor().getMessageTypes().get(0);
+        internal_static_rosa_im_protobuf_Version_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_rosa_im_protobuf_Version_descriptor,
+                new String[]{});
+        internal_static_rosa_im_protobuf_Message_descriptor =
+                getDescriptor().getMessageTypes().get(1);
+        internal_static_rosa_im_protobuf_Message_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_rosa_im_protobuf_Message_descriptor,
+                new String[]{"GId", "Type", "MessageContent", "ProtocolVersion",});
+        internal_static_rosa_im_protobuf_MessageContent_descriptor =
+                getDescriptor().getMessageTypes().get(2);
+        internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_rosa_im_protobuf_MessageContent_descriptor,
+                new String[]{"ContentType", "Content",});
+        internal_static_rosa_im_protobuf_File_descriptor =
+                getDescriptor().getMessageTypes().get(3);
+        internal_static_rosa_im_protobuf_File_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_rosa_im_protobuf_File_descriptor,
+                new String[]{"To", "Data", "Name", "Size", "Type",});
+        internal_static_rosa_im_protobuf_Authorization_descriptor =
+                getDescriptor().getMessageTypes().get(4);
+        internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_rosa_im_protobuf_Authorization_descriptor,
+                new String[]{"CId", "Name", "Password",});
+        version.internalInit(descriptor.getExtensions().get(0));
+        com.google.protobuf.ExtensionRegistry registry =
+                com.google.protobuf.ExtensionRegistry.newInstance();
+        registry.add(MessageInfo.version);
+        com.google.protobuf.Descriptors.FileDescriptor
+                .internalUpdateFileDescriptor(descriptor, registry);
+        com.google.protobuf.AnyProto.getDescriptor();
+        com.google.protobuf.DescriptorProtos.getDescriptor();
     }
 
-    @Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    private MessageInfo() {
     }
 
-    public static Version parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Version parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Version parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Version parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Version parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Version parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Version parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Version parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Version parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Version parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistryLite registry) {
+        registry.add(MessageInfo.version);
     }
 
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Version prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistry registry) {
+        registerAllExtensions(
+                (com.google.protobuf.ExtensionRegistryLite) registry);
     }
 
-    @Override
-    protected Builder newBuilderForType(
-        BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
+    public static com.google.protobuf.Descriptors.FileDescriptor
+    getDescriptor() {
+        return descriptor;
     }
+
+    public interface VersionOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.Version)
+            com.google.protobuf.MessageOrBuilder {
+    }
+
+    public interface MessageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.Message)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * 消息的唯一标识
+         * </pre>
+         *
+         * <code>optional string g_id = 1;</code>
+         */
+        String getGId();
+
+        /**
+         * <pre>
+         * 消息的唯一标识
+         * </pre>
+         *
+         * <code>optional string g_id = 1;</code>
+         */
+        com.google.protobuf.ByteString
+        getGIdBytes();
+
+        /**
+         * <pre>
+         * 消息所属的会话的类型
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+         */
+        int getTypeValue();
+
+        /**
+         * <pre>
+         * 消息所属的会话的类型
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+         */
+        Message.Type getType();
+
+        /**
+         * <pre>
+         * 消息实体
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+         */
+        boolean hasMessageContent();
+
+        /**
+         * <pre>
+         * 消息实体
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+         */
+        MessageContent getMessageContent();
+
+        /**
+         * <pre>
+         * 消息实体
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+         */
+        MessageContentOrBuilder getMessageContentOrBuilder();
+
+        /**
+         * <pre>
+         * 协议版本号
+         * </pre>
+         *
+         * <code>optional string protocol_version = 4;</code>
+         */
+        String getProtocolVersion();
+
+        /**
+         * <pre>
+         * 协议版本号
+         * </pre>
+         *
+         * <code>optional string protocol_version = 4;</code>
+         */
+        com.google.protobuf.ByteString
+        getProtocolVersionBytes();
+    }
+
+    public interface MessageContentOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.MessageContent)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional string content_type = 1;</code>
+         */
+        String getContentType();
+
+        /**
+         * <code>optional string content_type = 1;</code>
+         */
+        com.google.protobuf.ByteString
+        getContentTypeBytes();
+
+        /**
+         * <pre>
+         * 消息实体的payload
+         * </pre>
+         *
+         * <code>optional .google.protobuf.Any content = 2;</code>
+         */
+        boolean hasContent();
+
+        /**
+         * <pre>
+         * 消息实体的payload
+         * </pre>
+         *
+         * <code>optional .google.protobuf.Any content = 2;</code>
+         */
+        com.google.protobuf.Any getContent();
+
+        /**
+         * <pre>
+         * 消息实体的payload
+         * </pre>
+         *
+         * <code>optional .google.protobuf.Any content = 2;</code>
+         */
+        com.google.protobuf.AnyOrBuilder getContentOrBuilder();
+    }
+
+    public interface FileOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.File)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * 接收端clientId
+         * </pre>
+         *
+         * <code>optional string to = 1;</code>
+         */
+        String getTo();
+
+        /**
+         * <pre>
+         * 接收端clientId
+         * </pre>
+         *
+         * <code>optional string to = 1;</code>
+         */
+        com.google.protobuf.ByteString
+        getToBytes();
+
+        /**
+         * <pre>
+         * 文件内容
+         * </pre>
+         *
+         * <code>optional bytes data = 2;</code>
+         */
+        com.google.protobuf.ByteString getData();
+
+        /**
+         * <pre>
+         * 文件名
+         * </pre>
+         *
+         * <code>optional string name = 3;</code>
+         */
+        String getName();
+
+        /**
+         * <pre>
+         * 文件名
+         * </pre>
+         *
+         * <code>optional string name = 3;</code>
+         */
+        com.google.protobuf.ByteString
+        getNameBytes();
+
+        /**
+         * <pre>
+         * 文件大小
+         * </pre>
+         *
+         * <code>optional uint64 size = 4;</code>
+         */
+        long getSize();
+
+        /**
+         * <pre>
+         * 文件类型
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         */
+        String getType();
+
+        /**
+         * <pre>
+         * 文件类型
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         */
+        com.google.protobuf.ByteString
+        getTypeBytes();
+    }
+
+    public interface AuthorizationOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.Authorization)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * 客户端Id( Unique Client Id)
+         * </pre>
+         *
+         * <code>optional string c_id = 1;</code>
+         */
+        String getCId();
+
+        /**
+         * <pre>
+         * 客户端Id( Unique Client Id)
+         * </pre>
+         *
+         * <code>optional string c_id = 1;</code>
+         */
+        com.google.protobuf.ByteString
+        getCIdBytes();
+
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>optional string name = 2;</code>
+         */
+        String getName();
+
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>optional string name = 2;</code>
+         */
+        com.google.protobuf.ByteString
+        getNameBytes();
+
+        /**
+         * <pre>
+         * 密码
+         * </pre>
+         *
+         * <code>optional string password = 3;</code>
+         */
+        String getPassword();
+
+        /**
+         * <pre>
+         * 密码
+         * </pre>
+         *
+         * <code>optional string password = 3;</code>
+         */
+        com.google.protobuf.ByteString
+        getPasswordBytes();
+    }
+
     /**
      * <pre>
      * 每次修改协议，请升级这个版本号
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code rosa.im.protobuf.Version}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.Version)
-        VersionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Version_descriptor;
-      }
-
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Version_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Version.class, Builder.class);
-      }
-
-      // Construct using com.xiaoshu.im.MessageInfo.Version.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Version_descriptor;
-      }
-
-      public Version getDefaultInstanceForType() {
-        return Version.getDefaultInstance();
-      }
-
-      public Version build() {
-        Version result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public Version buildPartial() {
-        Version result = new Version(this);
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Version) {
-          return mergeFrom((Version)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Version other) {
-        if (other == Version.getDefaultInstance()) return this;
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Version parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Version) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.Version)
-    }
-
-    // @@protoc_insertion_point(class_scope:rosa.im.protobuf.Version)
-    private static final Version DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Version();
-    }
-
-    public static Version getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Version>
-        PARSER = new com.google.protobuf.AbstractParser<Version>() {
-      public Version parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Version(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Version> parser() {
-      return PARSER;
-    }
-
-    @Override
-    public com.google.protobuf.Parser<Version> getParserForType() {
-      return PARSER;
-    }
-
-    public Version getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.Message)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 消息的唯一标识
-     * </pre>
-     *
-     * <code>optional string g_id = 1;</code>
-     */
-    String getGId();
-    /**
-     * <pre>
-     * 消息的唯一标识
-     * </pre>
-     *
-     * <code>optional string g_id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getGIdBytes();
-
-    /**
-     * <pre>
-     * 消息所属的会话的类型
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-     */
-    int getTypeValue();
-    /**
-     * <pre>
-     * 消息所属的会话的类型
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-     */
-    Message.Type getType();
-
-    /**
-     * <pre>
-     * 消息实体
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-     */
-    boolean hasMessageContent();
-    /**
-     * <pre>
-     * 消息实体
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-     */
-    MessageContent getMessageContent();
-    /**
-     * <pre>
-     * 消息实体
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-     */
-    MessageContentOrBuilder getMessageContentOrBuilder();
-
-    /**
-     * <pre>
-     * 协议版本号
-     * </pre>
-     *
-     * <code>optional string protocol_version = 4;</code>
-     */
-    String getProtocolVersion();
-    /**
-     * <pre>
-     * 协议版本号
-     * </pre>
-     *
-     * <code>optional string protocol_version = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getProtocolVersionBytes();
-  }
-  /**
-   * <pre>
-   * 图片透传，协议说明；
-   * </pre>
-   *
-   * Protobuf type {@code rosa.im.protobuf.Message}
-   */
-  public  static final class Message extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:rosa.im.protobuf.Message)
-      MessageOrBuilder {
-    // Use Message.newBuilder() to construct.
-    private Message(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Message() {
-      gId_ = "";
-      type_ = 0;
-      protocolVersion_ = "";
-    }
-
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private Message(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
+    public static final class Version extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:rosa.im.protobuf.Version)
+            VersionOrBuilder {
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:rosa.im.protobuf.Version)
+        private static final Version DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<Version>
+                PARSER = new com.google.protobuf.AbstractParser<Version>() {
+            public Version parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Version(input, extensionRegistry);
             }
-            case 10: {
-              String s = input.readStringRequireUtf8();
+        };
 
-              gId_ = s;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
-              break;
-            }
-            case 26: {
-              MessageContent.Builder subBuilder = null;
-              if (messageContent_ != null) {
-                subBuilder = messageContent_.toBuilder();
-              }
-              messageContent_ = input.readMessage(MessageContent.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(messageContent_);
-                messageContent_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              String s = input.readStringRequireUtf8();
-
-              protocolVersion_ = s;
-              break;
-            }
-          }
+        static {
+            DEFAULT_INSTANCE = new Version();
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        private byte memoizedIsInitialized = -1;
+
+        // Use Version.newBuilder() to construct.
+        private Version(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private Version() {
+        }
+
+        private Version(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!input.skipField(tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MessageInfo.internal_static_rosa_im_protobuf_Message_descriptor;
-    }
+            return MessageInfo.internal_static_rosa_im_protobuf_Version_descriptor;
+        }
 
-    protected FieldAccessorTable
+        public static Version parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static Version parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static Version parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static Version parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static Version parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static Version parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Version parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static Version parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Version parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static Version parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(Version prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static Version getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<Version> parser() {
+            return PARSER;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
+
+        protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MessageInfo.internal_static_rosa_im_protobuf_Message_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Message.class, Builder.class);
-    }
-
-    /**
-     * <pre>
-     * 会话类型
-     * </pre>
-     *
-     * Protobuf enum {@code rosa.im.protobuf.Message.Type}
-     */
-    public enum Type
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <pre>
-       * 数据传输
-       * </pre>
-       *
-       * <code>FILE = 0;</code>
-       */
-      FILE(0),
-      /**
-       * <pre>
-       * 心跳命令-发送
-       * </pre>
-       *
-       * <code>PING = 1;</code>
-       */
-      PING(1),
-      /**
-       * <pre>
-       * 心跳命令-回复
-       * </pre>
-       *
-       * <code>PONG = 2;</code>
-       */
-      PONG(2),
-      /**
-       * <pre>
-       * 鉴权信息
-       * </pre>
-       *
-       * <code>AUTH = 3;</code>
-       */
-      AUTH(3),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <pre>
-       * 数据传输
-       * </pre>
-       *
-       * <code>FILE = 0;</code>
-       */
-      public static final int FILE_VALUE = 0;
-      /**
-       * <pre>
-       * 心跳命令-发送
-       * </pre>
-       *
-       * <code>PING = 1;</code>
-       */
-      public static final int PING_VALUE = 1;
-      /**
-       * <pre>
-       * 心跳命令-回复
-       * </pre>
-       *
-       * <code>PONG = 2;</code>
-       */
-      public static final int PONG_VALUE = 2;
-      /**
-       * <pre>
-       * 鉴权信息
-       * </pre>
-       *
-       * <code>AUTH = 3;</code>
-       */
-      public static final int AUTH_VALUE = 3;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
+            return MessageInfo.internal_static_rosa_im_protobuf_Version_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            Version.class, Builder.class);
         }
-        return value;
-      }
 
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @Deprecated
-      public static Type valueOf(int value) {
-        return forNumber(value);
-      }
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
 
-      public static Type forNumber(int value) {
-        switch (value) {
-          case 0: return FILE;
-          case 1: return PING;
-          case 2: return PONG;
-          case 3: return AUTH;
-          default: return null;
+            memoizedIsInitialized = 1;
+            return true;
         }
-      }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<Type>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Type> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
-              public Type findValueByNumber(int number) {
-                return Type.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return Message.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Type[] VALUES = values();
-
-      public static Type valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
         }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
+
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            memoizedSize = size;
+            return size;
         }
-        return VALUES[desc.getIndex()];
-      }
 
-      private final int value;
+        @Override
+        public boolean equals(final Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof Version)) {
+                return super.equals(obj);
+            }
+            Version other = (Version) obj;
 
-      private Type(int value) {
-        this.value = value;
-      }
+            boolean result = true;
+            return result;
+        }
 
-      // @@protoc_insertion_point(enum_scope:rosa.im.protobuf.Message.Type)
-    }
+        @Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptorForType().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
 
-    public static final int G_ID_FIELD_NUMBER = 1;
-    private volatile Object gId_;
-    /**
-     * <pre>
-     * 消息的唯一标识
-     * </pre>
-     *
-     * <code>optional string g_id = 1;</code>
-     */
-    public String getGId() {
-      Object ref = gId_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        gId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 消息的唯一标识
-     * </pre>
-     *
-     * <code>optional string g_id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getGIdBytes() {
-      Object ref = gId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        gId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
 
-    public static final int TYPE_FIELD_NUMBER = 2;
-    private int type_;
-    /**
-     * <pre>
-     * 消息所属的会话的类型
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-     */
-    public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     * 消息所属的会话的类型
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-     */
-    public Type getType() {
-      Type result = Type.valueOf(type_);
-      return result == null ? Type.UNRECOGNIZED : result;
-    }
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
 
-    public static final int MESSAGE_CONTENT_FIELD_NUMBER = 3;
-    private MessageContent messageContent_;
-    /**
-     * <pre>
-     * 消息实体
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-     */
-    public boolean hasMessageContent() {
-      return messageContent_ != null;
-    }
-    /**
-     * <pre>
-     * 消息实体
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-     */
-    public MessageContent getMessageContent() {
-      return messageContent_ == null ? MessageContent.getDefaultInstance() : messageContent_;
-    }
-    /**
-     * <pre>
-     * 消息实体
-     * </pre>
-     *
-     * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-     */
-    public MessageContentOrBuilder getMessageContentOrBuilder() {
-      return getMessageContent();
-    }
+        @Override
+        protected Builder newBuilderForType(
+                BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
 
-    public static final int PROTOCOL_VERSION_FIELD_NUMBER = 4;
-    private volatile Object protocolVersion_;
-    /**
-     * <pre>
-     * 协议版本号
-     * </pre>
-     *
-     * <code>optional string protocol_version = 4;</code>
-     */
-    public String getProtocolVersion() {
-      Object ref = protocolVersion_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        protocolVersion_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 协议版本号
-     * </pre>
-     *
-     * <code>optional string protocol_version = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getProtocolVersionBytes() {
-      Object ref = protocolVersion_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        protocolVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
+        @Override
+        public com.google.protobuf.Parser<Version> getParserForType() {
+            return PARSER;
+        }
 
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+        public Version getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
 
-      memoizedIsInitialized = 1;
-      return true;
-    }
+        /**
+         * <pre>
+         * 每次修改协议，请升级这个版本号
+         * </pre>
+         * <p>
+         * Protobuf type {@code rosa.im.protobuf.Version}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.Version)
+                VersionOrBuilder {
+            // Construct using com.xiaoshu.im.MessageInfo.Version.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getGIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gId_);
-      }
-      if (type_ != Type.FILE.getNumber()) {
-        output.writeEnum(2, type_);
-      }
-      if (messageContent_ != null) {
-        output.writeMessage(3, getMessageContent());
-      }
-      if (!getProtocolVersionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, protocolVersion_);
-      }
-    }
+            private Builder(
+                    BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
 
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Version_descriptor;
+            }
 
-      size = 0;
-      if (!getGIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gId_);
-      }
-      if (type_ != Type.FILE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, type_);
-      }
-      if (messageContent_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getMessageContent());
-      }
-      if (!getProtocolVersionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, protocolVersion_);
-      }
-      memoizedSize = size;
-      return size;
-    }
+            protected FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Version_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                Version.class, Builder.class);
+            }
 
-    private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Message)) {
-        return super.equals(obj);
-      }
-      Message other = (Message) obj;
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
 
-      boolean result = true;
-      result = result && getGId()
-          .equals(other.getGId());
-      result = result && type_ == other.type_;
-      result = result && (hasMessageContent() == other.hasMessageContent());
-      if (hasMessageContent()) {
-        result = result && getMessageContent()
-            .equals(other.getMessageContent());
-      }
-      result = result && getProtocolVersion()
-          .equals(other.getProtocolVersion());
-      return result;
+            public Builder clear() {
+                super.clear();
+                return this;
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Version_descriptor;
+            }
+
+            public Version getDefaultInstanceForType() {
+                return Version.getDefaultInstance();
+            }
+
+            public Version build() {
+                Version result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public Version buildPartial() {
+                Version result = new Version(this);
+                onBuilt();
+                return result;
+            }
+
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof Version) {
+                    return mergeFrom((Version) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(Version other) {
+                if (other == Version.getDefaultInstance()) return this;
+                onChanged();
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                Version parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (Version) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.Version)
+        }
+
     }
 
-    @Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + G_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGId().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      if (hasMessageContent()) {
-        hash = (37 * hash) + MESSAGE_CONTENT_FIELD_NUMBER;
-        hash = (53 * hash) + getMessageContent().hashCode();
-      }
-      hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getProtocolVersion().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Message parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Message parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Message parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Message parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Message parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Message parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Message parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Message parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Message parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Message parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Message prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @Override
-    protected Builder newBuilderForType(
-        BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * 图片透传，协议说明；
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code rosa.im.protobuf.Message}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.Message)
-        MessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Message_descriptor;
-      }
-
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Message_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Message.class, Builder.class);
-      }
-
-      // Construct using com.xiaoshu.im.MessageInfo.Message.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        gId_ = "";
-
-        type_ = 0;
-
-        if (messageContentBuilder_ == null) {
-          messageContent_ = null;
-        } else {
-          messageContent_ = null;
-          messageContentBuilder_ = null;
-        }
-        protocolVersion_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Message_descriptor;
-      }
-
-      public Message getDefaultInstanceForType() {
-        return Message.getDefaultInstance();
-      }
-
-      public Message build() {
-        Message result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public Message buildPartial() {
-        Message result = new Message(this);
-        result.gId_ = gId_;
-        result.type_ = type_;
-        if (messageContentBuilder_ == null) {
-          result.messageContent_ = messageContent_;
-        } else {
-          result.messageContent_ = messageContentBuilder_.build();
-        }
-        result.protocolVersion_ = protocolVersion_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Message) {
-          return mergeFrom((Message)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Message other) {
-        if (other == Message.getDefaultInstance()) return this;
-        if (!other.getGId().isEmpty()) {
-          gId_ = other.gId_;
-          onChanged();
-        }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        if (other.hasMessageContent()) {
-          mergeMessageContent(other.getMessageContent());
-        }
-        if (!other.getProtocolVersion().isEmpty()) {
-          protocolVersion_ = other.protocolVersion_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Message parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Message) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private Object gId_ = "";
-      /**
-       * <pre>
-       * 消息的唯一标识
-       * </pre>
-       *
-       * <code>optional string g_id = 1;</code>
-       */
-      public String getGId() {
-        Object ref = gId_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          gId_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 消息的唯一标识
-       * </pre>
-       *
-       * <code>optional string g_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getGIdBytes() {
-        Object ref = gId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          gId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 消息的唯一标识
-       * </pre>
-       *
-       * <code>optional string g_id = 1;</code>
-       */
-      public Builder setGId(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        gId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息的唯一标识
-       * </pre>
-       *
-       * <code>optional string g_id = 1;</code>
-       */
-      public Builder clearGId() {
-        
-        gId_ = getDefaultInstance().getGId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息的唯一标识
-       * </pre>
-       *
-       * <code>optional string g_id = 1;</code>
-       */
-      public Builder setGIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        gId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int type_ = 0;
-      /**
-       * <pre>
-       * 消息所属的会话的类型
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-       */
-      public int getTypeValue() {
-        return type_;
-      }
-      /**
-       * <pre>
-       * 消息所属的会话的类型
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-       */
-      public Builder setTypeValue(int value) {
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息所属的会话的类型
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-       */
-      public Type getType() {
-        Type result = Type.valueOf(type_);
-        return result == null ? Type.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * 消息所属的会话的类型
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-       */
-      public Builder setType(Type value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        type_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息所属的会话的类型
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
-       */
-      public Builder clearType() {
-        
-        type_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private MessageContent messageContent_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          MessageContent, MessageContent.Builder, MessageContentOrBuilder> messageContentBuilder_;
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public boolean hasMessageContent() {
-        return messageContentBuilder_ != null || messageContent_ != null;
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public MessageContent getMessageContent() {
-        if (messageContentBuilder_ == null) {
-          return messageContent_ == null ? MessageContent.getDefaultInstance() : messageContent_;
-        } else {
-          return messageContentBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public Builder setMessageContent(MessageContent value) {
-        if (messageContentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          messageContent_ = value;
-          onChanged();
-        } else {
-          messageContentBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public Builder setMessageContent(
-          MessageContent.Builder builderForValue) {
-        if (messageContentBuilder_ == null) {
-          messageContent_ = builderForValue.build();
-          onChanged();
-        } else {
-          messageContentBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public Builder mergeMessageContent(MessageContent value) {
-        if (messageContentBuilder_ == null) {
-          if (messageContent_ != null) {
-            messageContent_ =
-              MessageContent.newBuilder(messageContent_).mergeFrom(value).buildPartial();
-          } else {
-            messageContent_ = value;
-          }
-          onChanged();
-        } else {
-          messageContentBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public Builder clearMessageContent() {
-        if (messageContentBuilder_ == null) {
-          messageContent_ = null;
-          onChanged();
-        } else {
-          messageContent_ = null;
-          messageContentBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public MessageContent.Builder getMessageContentBuilder() {
-        
-        onChanged();
-        return getMessageContentFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      public MessageContentOrBuilder getMessageContentOrBuilder() {
-        if (messageContentBuilder_ != null) {
-          return messageContentBuilder_.getMessageOrBuilder();
-        } else {
-          return messageContent_ == null ?
-              MessageContent.getDefaultInstance() : messageContent_;
-        }
-      }
-      /**
-       * <pre>
-       * 消息实体
-       * </pre>
-       *
-       * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          MessageContent, MessageContent.Builder, MessageContentOrBuilder>
-          getMessageContentFieldBuilder() {
-        if (messageContentBuilder_ == null) {
-          messageContentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              MessageContent, MessageContent.Builder, MessageContentOrBuilder>(
-                  getMessageContent(),
-                  getParentForChildren(),
-                  isClean());
-          messageContent_ = null;
-        }
-        return messageContentBuilder_;
-      }
-
-      private Object protocolVersion_ = "";
-      /**
-       * <pre>
-       * 协议版本号
-       * </pre>
-       *
-       * <code>optional string protocol_version = 4;</code>
-       */
-      public String getProtocolVersion() {
-        Object ref = protocolVersion_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          protocolVersion_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 协议版本号
-       * </pre>
-       *
-       * <code>optional string protocol_version = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getProtocolVersionBytes() {
-        Object ref = protocolVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          protocolVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 协议版本号
-       * </pre>
-       *
-       * <code>optional string protocol_version = 4;</code>
-       */
-      public Builder setProtocolVersion(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        protocolVersion_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 协议版本号
-       * </pre>
-       *
-       * <code>optional string protocol_version = 4;</code>
-       */
-      public Builder clearProtocolVersion() {
-        
-        protocolVersion_ = getDefaultInstance().getProtocolVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 协议版本号
-       * </pre>
-       *
-       * <code>optional string protocol_version = 4;</code>
-       */
-      public Builder setProtocolVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        protocolVersion_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.Message)
-    }
-
-    // @@protoc_insertion_point(class_scope:rosa.im.protobuf.Message)
-    private static final Message DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Message();
-    }
-
-    public static Message getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Message>
-        PARSER = new com.google.protobuf.AbstractParser<Message>() {
-      public Message parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Message(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Message> parser() {
-      return PARSER;
-    }
-
-    @Override
-    public com.google.protobuf.Parser<Message> getParserForType() {
-      return PARSER;
-    }
-
-    public Message getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface MessageContentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.MessageContent)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string content_type = 1;</code>
-     */
-    String getContentType();
-    /**
-     * <code>optional string content_type = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getContentTypeBytes();
-
-    /**
-     * <pre>
-     * 消息实体的payload
-     * </pre>
-     *
-     * <code>optional .google.protobuf.Any content = 2;</code>
-     */
-    boolean hasContent();
-    /**
-     * <pre>
-     * 消息实体的payload
-     * </pre>
-     *
-     * <code>optional .google.protobuf.Any content = 2;</code>
-     */
-    com.google.protobuf.Any getContent();
-    /**
-     * <pre>
-     * 消息实体的payload
-     * </pre>
-     *
-     * <code>optional .google.protobuf.Any content = 2;</code>
-     */
-    com.google.protobuf.AnyOrBuilder getContentOrBuilder();
-  }
-  /**
-   * <pre>
-   * 消息体信息
-   * </pre>
-   *
-   * Protobuf type {@code rosa.im.protobuf.MessageContent}
-   */
-  public  static final class MessageContent extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:rosa.im.protobuf.MessageContent)
-      MessageContentOrBuilder {
-    // Use MessageContent.newBuilder() to construct.
-    private MessageContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MessageContent() {
-      contentType_ = "";
-    }
-
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private MessageContent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
+    public static final class Message extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:rosa.im.protobuf.Message)
+            MessageOrBuilder {
+        public static final int G_ID_FIELD_NUMBER = 1;
+        public static final int TYPE_FIELD_NUMBER = 2;
+        public static final int MESSAGE_CONTENT_FIELD_NUMBER = 3;
+        public static final int PROTOCOL_VERSION_FIELD_NUMBER = 4;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:rosa.im.protobuf.Message)
+        private static final Message DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<Message>
+                PARSER = new com.google.protobuf.AbstractParser<Message>() {
+            public Message parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Message(input, extensionRegistry);
             }
-            case 10: {
-              String s = input.readStringRequireUtf8();
+        };
 
-              contentType_ = s;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.Any.Builder subBuilder = null;
-              if (content_ != null) {
-                subBuilder = content_.toBuilder();
-              }
-              content_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(content_);
-                content_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          }
+        static {
+            DEFAULT_INSTANCE = new Message();
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        private volatile Object gId_;
+        private int type_;
+        private MessageContent messageContent_;
+        private volatile Object protocolVersion_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use Message.newBuilder() to construct.
+        private Message(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private Message() {
+            gId_ = "";
+            type_ = 0;
+            protocolVersion_ = "";
+        }
+
+        private Message(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            int mutable_bitField0_ = 0;
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!input.skipField(tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            String s = input.readStringRequireUtf8();
+
+                            gId_ = s;
+                            break;
+                        }
+                        case 16: {
+                            int rawValue = input.readEnum();
+
+                            type_ = rawValue;
+                            break;
+                        }
+                        case 26: {
+                            MessageContent.Builder subBuilder = null;
+                            if (messageContent_ != null) {
+                                subBuilder = messageContent_.toBuilder();
+                            }
+                            messageContent_ = input.readMessage(MessageContent.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(messageContent_);
+                                messageContent_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                        case 34: {
+                            String s = input.readStringRequireUtf8();
+
+                            protocolVersion_ = s;
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_descriptor;
-    }
+            return MessageInfo.internal_static_rosa_im_protobuf_Message_descriptor;
+        }
 
-    protected FieldAccessorTable
+        public static Message parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static Message parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static Message parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static Message parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static Message parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static Message parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Message parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static Message parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Message parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static Message parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(Message prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static Message getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<Message> parser() {
+            return PARSER;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
+
+        protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              MessageContent.class, Builder.class);
+            return MessageInfo.internal_static_rosa_im_protobuf_Message_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            Message.class, Builder.class);
+        }
+
+        /**
+         * <pre>
+         * 消息的唯一标识
+         * </pre>
+         *
+         * <code>optional string g_id = 1;</code>
+         */
+        public String getGId() {
+            Object ref = gId_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                gId_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 消息的唯一标识
+         * </pre>
+         *
+         * <code>optional string g_id = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+        getGIdBytes() {
+            Object ref = gId_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                gId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <pre>
+         * 消息所属的会话的类型
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+         */
+        public int getTypeValue() {
+            return type_;
+        }
+
+        /**
+         * <pre>
+         * 消息所属的会话的类型
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+         */
+        public Type getType() {
+            Type result = Type.valueOf(type_);
+            return result == null ? Type.UNRECOGNIZED : result;
+        }
+
+        /**
+         * <pre>
+         * 消息实体
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+         */
+        public boolean hasMessageContent() {
+            return messageContent_ != null;
+        }
+
+        /**
+         * <pre>
+         * 消息实体
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+         */
+        public MessageContent getMessageContent() {
+            return messageContent_ == null ? MessageContent.getDefaultInstance() : messageContent_;
+        }
+
+        /**
+         * <pre>
+         * 消息实体
+         * </pre>
+         *
+         * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+         */
+        public MessageContentOrBuilder getMessageContentOrBuilder() {
+            return getMessageContent();
+        }
+
+        /**
+         * <pre>
+         * 协议版本号
+         * </pre>
+         *
+         * <code>optional string protocol_version = 4;</code>
+         */
+        public String getProtocolVersion() {
+            Object ref = protocolVersion_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                protocolVersion_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 协议版本号
+         * </pre>
+         *
+         * <code>optional string protocol_version = 4;</code>
+         */
+        public com.google.protobuf.ByteString
+        getProtocolVersionBytes() {
+            Object ref = protocolVersion_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                protocolVersion_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getGIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gId_);
+            }
+            if (type_ != Type.FILE.getNumber()) {
+                output.writeEnum(2, type_);
+            }
+            if (messageContent_ != null) {
+                output.writeMessage(3, getMessageContent());
+            }
+            if (!getProtocolVersionBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 4, protocolVersion_);
+            }
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getGIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gId_);
+            }
+            if (type_ != Type.FILE.getNumber()) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(2, type_);
+            }
+            if (messageContent_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(3, getMessageContent());
+            }
+            if (!getProtocolVersionBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, protocolVersion_);
+            }
+            memoizedSize = size;
+            return size;
+        }
+
+        @Override
+        public boolean equals(final Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof Message)) {
+                return super.equals(obj);
+            }
+            Message other = (Message) obj;
+
+            boolean result = true;
+            result = result && getGId()
+                    .equals(other.getGId());
+            result = result && type_ == other.type_;
+            result = result && (hasMessageContent() == other.hasMessageContent());
+            if (hasMessageContent()) {
+                result = result && getMessageContent()
+                        .equals(other.getMessageContent());
+            }
+            result = result && getProtocolVersion()
+                    .equals(other.getProtocolVersion());
+            return result;
+        }
+
+        @Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptorForType().hashCode();
+            hash = (37 * hash) + G_ID_FIELD_NUMBER;
+            hash = (53 * hash) + getGId().hashCode();
+            hash = (37 * hash) + TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + type_;
+            if (hasMessageContent()) {
+                hash = (37 * hash) + MESSAGE_CONTENT_FIELD_NUMBER;
+                hash = (53 * hash) + getMessageContent().hashCode();
+            }
+            hash = (37 * hash) + PROTOCOL_VERSION_FIELD_NUMBER;
+            hash = (53 * hash) + getProtocolVersion().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @Override
+        public com.google.protobuf.Parser<Message> getParserForType() {
+            return PARSER;
+        }
+
+        public Message getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * <pre>
+         * 会话类型
+         * </pre>
+         * <p>
+         * Protobuf enum {@code rosa.im.protobuf.Message.Type}
+         */
+        public enum Type
+                implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <pre>
+             * 数据传输
+             * </pre>
+             *
+             * <code>FILE = 0;</code>
+             */
+            FILE(0),
+            /**
+             * <pre>
+             * 心跳命令-发送
+             * </pre>
+             *
+             * <code>PING = 1;</code>
+             */
+            PING(1),
+            /**
+             * <pre>
+             * 心跳命令-回复
+             * </pre>
+             *
+             * <code>PONG = 2;</code>
+             */
+            PONG(2),
+            /**
+             * <pre>
+             * 鉴权信息
+             * </pre>
+             *
+             * <code>AUTH = 3;</code>
+             */
+            AUTH(3),
+            UNRECOGNIZED(-1),
+            ;
+
+            /**
+             * <pre>
+             * 数据传输
+             * </pre>
+             *
+             * <code>FILE = 0;</code>
+             */
+            public static final int FILE_VALUE = 0;
+            /**
+             * <pre>
+             * 心跳命令-发送
+             * </pre>
+             *
+             * <code>PING = 1;</code>
+             */
+            public static final int PING_VALUE = 1;
+            /**
+             * <pre>
+             * 心跳命令-回复
+             * </pre>
+             *
+             * <code>PONG = 2;</code>
+             */
+            public static final int PONG_VALUE = 2;
+            /**
+             * <pre>
+             * 鉴权信息
+             * </pre>
+             *
+             * <code>AUTH = 3;</code>
+             */
+            public static final int AUTH_VALUE = 3;
+            private static final com.google.protobuf.Internal.EnumLiteMap<
+                    Type> internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+                        public Type findValueByNumber(int number) {
+                            return Type.forNumber(number);
+                        }
+                    };
+            private static final Type[] VALUES = values();
+            private final int value;
+
+            private Type(int value) {
+                this.value = value;
+            }
+
+            /**
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @Deprecated
+            public static Type valueOf(int value) {
+                return forNumber(value);
+            }
+
+            public static Type forNumber(int value) {
+                switch (value) {
+                    case 0:
+                        return FILE;
+                    case 1:
+                        return PING;
+                    case 2:
+                        return PONG;
+                    case 3:
+                        return AUTH;
+                    default:
+                        return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<Type>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+                return Message.getDescriptor().getEnumTypes().get(0);
+            }
+
+            public static Type valueOf(
+                    com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+                if (desc.getType() != getDescriptor()) {
+                    throw new IllegalArgumentException(
+                            "EnumValueDescriptor is not for this type.");
+                }
+                if (desc.getIndex() == -1) {
+                    return UNRECOGNIZED;
+                }
+                return VALUES[desc.getIndex()];
+            }
+
+            public final int getNumber() {
+                if (this == UNRECOGNIZED) {
+                    throw new IllegalArgumentException(
+                            "Can't get the number of an unknown enum value.");
+                }
+                return value;
+            }
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+                return getDescriptor().getValues().get(ordinal());
+            }
+
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+                return getDescriptor();
+            }
+
+            // @@protoc_insertion_point(enum_scope:rosa.im.protobuf.Message.Type)
+        }
+
+        /**
+         * <pre>
+         * 图片透传，协议说明；
+         * </pre>
+         * <p>
+         * Protobuf type {@code rosa.im.protobuf.Message}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.Message)
+                MessageOrBuilder {
+            private Object gId_ = "";
+            private int type_ = 0;
+            private MessageContent messageContent_ = null;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    MessageContent, MessageContent.Builder, MessageContentOrBuilder> messageContentBuilder_;
+            private Object protocolVersion_ = "";
+
+            // Construct using com.xiaoshu.im.MessageInfo.Message.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Message_descriptor;
+            }
+
+            protected FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Message_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                Message.class, Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                gId_ = "";
+
+                type_ = 0;
+
+                if (messageContentBuilder_ == null) {
+                    messageContent_ = null;
+                } else {
+                    messageContent_ = null;
+                    messageContentBuilder_ = null;
+                }
+                protocolVersion_ = "";
+
+                return this;
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Message_descriptor;
+            }
+
+            public Message getDefaultInstanceForType() {
+                return Message.getDefaultInstance();
+            }
+
+            public Message build() {
+                Message result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public Message buildPartial() {
+                Message result = new Message(this);
+                result.gId_ = gId_;
+                result.type_ = type_;
+                if (messageContentBuilder_ == null) {
+                    result.messageContent_ = messageContent_;
+                } else {
+                    result.messageContent_ = messageContentBuilder_.build();
+                }
+                result.protocolVersion_ = protocolVersion_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof Message) {
+                    return mergeFrom((Message) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(Message other) {
+                if (other == Message.getDefaultInstance()) return this;
+                if (!other.getGId().isEmpty()) {
+                    gId_ = other.gId_;
+                    onChanged();
+                }
+                if (other.type_ != 0) {
+                    setTypeValue(other.getTypeValue());
+                }
+                if (other.hasMessageContent()) {
+                    mergeMessageContent(other.getMessageContent());
+                }
+                if (!other.getProtocolVersion().isEmpty()) {
+                    protocolVersion_ = other.protocolVersion_;
+                    onChanged();
+                }
+                onChanged();
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                Message parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (Message) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息的唯一标识
+             * </pre>
+             *
+             * <code>optional string g_id = 1;</code>
+             */
+            public String getGId() {
+                Object ref = gId_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    gId_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 消息的唯一标识
+             * </pre>
+             *
+             * <code>optional string g_id = 1;</code>
+             */
+            public Builder setGId(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                gId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息的唯一标识
+             * </pre>
+             *
+             * <code>optional string g_id = 1;</code>
+             */
+            public com.google.protobuf.ByteString
+            getGIdBytes() {
+                Object ref = gId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    gId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 消息的唯一标识
+             * </pre>
+             *
+             * <code>optional string g_id = 1;</code>
+             */
+            public Builder setGIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                gId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息的唯一标识
+             * </pre>
+             *
+             * <code>optional string g_id = 1;</code>
+             */
+            public Builder clearGId() {
+
+                gId_ = getDefaultInstance().getGId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息所属的会话的类型
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+             */
+            public int getTypeValue() {
+                return type_;
+            }
+
+            /**
+             * <pre>
+             * 消息所属的会话的类型
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+             */
+            public Builder setTypeValue(int value) {
+                type_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息所属的会话的类型
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+             */
+            public Type getType() {
+                Type result = Type.valueOf(type_);
+                return result == null ? Type.UNRECOGNIZED : result;
+            }
+
+            /**
+             * <pre>
+             * 消息所属的会话的类型
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+             */
+            public Builder setType(Type value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                type_ = value.getNumber();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息所属的会话的类型
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.Message.Type type = 2;</code>
+             */
+            public Builder clearType() {
+
+                type_ = 0;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public boolean hasMessageContent() {
+                return messageContentBuilder_ != null || messageContent_ != null;
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public MessageContent getMessageContent() {
+                if (messageContentBuilder_ == null) {
+                    return messageContent_ == null ? MessageContent.getDefaultInstance() : messageContent_;
+                } else {
+                    return messageContentBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public Builder setMessageContent(MessageContent value) {
+                if (messageContentBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    messageContent_ = value;
+                    onChanged();
+                } else {
+                    messageContentBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public Builder setMessageContent(
+                    MessageContent.Builder builderForValue) {
+                if (messageContentBuilder_ == null) {
+                    messageContent_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    messageContentBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public Builder mergeMessageContent(MessageContent value) {
+                if (messageContentBuilder_ == null) {
+                    if (messageContent_ != null) {
+                        messageContent_ =
+                                MessageContent.newBuilder(messageContent_).mergeFrom(value).buildPartial();
+                    } else {
+                        messageContent_ = value;
+                    }
+                    onChanged();
+                } else {
+                    messageContentBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public Builder clearMessageContent() {
+                if (messageContentBuilder_ == null) {
+                    messageContent_ = null;
+                    onChanged();
+                } else {
+                    messageContent_ = null;
+                    messageContentBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public MessageContent.Builder getMessageContentBuilder() {
+
+                onChanged();
+                return getMessageContentFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            public MessageContentOrBuilder getMessageContentOrBuilder() {
+                if (messageContentBuilder_ != null) {
+                    return messageContentBuilder_.getMessageOrBuilder();
+                } else {
+                    return messageContent_ == null ?
+                            MessageContent.getDefaultInstance() : messageContent_;
+                }
+            }
+
+            /**
+             * <pre>
+             * 消息实体
+             * </pre>
+             *
+             * <code>optional .rosa.im.protobuf.MessageContent message_content = 3;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    MessageContent, MessageContent.Builder, MessageContentOrBuilder>
+            getMessageContentFieldBuilder() {
+                if (messageContentBuilder_ == null) {
+                    messageContentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            MessageContent, MessageContent.Builder, MessageContentOrBuilder>(
+                            getMessageContent(),
+                            getParentForChildren(),
+                            isClean());
+                    messageContent_ = null;
+                }
+                return messageContentBuilder_;
+            }
+
+            /**
+             * <pre>
+             * 协议版本号
+             * </pre>
+             *
+             * <code>optional string protocol_version = 4;</code>
+             */
+            public String getProtocolVersion() {
+                Object ref = protocolVersion_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    protocolVersion_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 协议版本号
+             * </pre>
+             *
+             * <code>optional string protocol_version = 4;</code>
+             */
+            public Builder setProtocolVersion(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                protocolVersion_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 协议版本号
+             * </pre>
+             *
+             * <code>optional string protocol_version = 4;</code>
+             */
+            public com.google.protobuf.ByteString
+            getProtocolVersionBytes() {
+                Object ref = protocolVersion_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    protocolVersion_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 协议版本号
+             * </pre>
+             *
+             * <code>optional string protocol_version = 4;</code>
+             */
+            public Builder setProtocolVersionBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                protocolVersion_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 协议版本号
+             * </pre>
+             *
+             * <code>optional string protocol_version = 4;</code>
+             */
+            public Builder clearProtocolVersion() {
+
+                protocolVersion_ = getDefaultInstance().getProtocolVersion();
+                onChanged();
+                return this;
+            }
+
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.Message)
+        }
+
     }
 
-    public static final int CONTENT_TYPE_FIELD_NUMBER = 1;
-    private volatile Object contentType_;
-    /**
-     * <code>optional string content_type = 1;</code>
-     */
-    public String getContentType() {
-      Object ref = contentType_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        contentType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string content_type = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getContentTypeBytes() {
-      Object ref = contentType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        contentType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTENT_FIELD_NUMBER = 2;
-    private com.google.protobuf.Any content_;
-    /**
-     * <pre>
-     * 消息实体的payload
-     * </pre>
-     *
-     * <code>optional .google.protobuf.Any content = 2;</code>
-     */
-    public boolean hasContent() {
-      return content_ != null;
-    }
-    /**
-     * <pre>
-     * 消息实体的payload
-     * </pre>
-     *
-     * <code>optional .google.protobuf.Any content = 2;</code>
-     */
-    public com.google.protobuf.Any getContent() {
-      return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
-    }
-    /**
-     * <pre>
-     * 消息实体的payload
-     * </pre>
-     *
-     * <code>optional .google.protobuf.Any content = 2;</code>
-     */
-    public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
-      return getContent();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getContentTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contentType_);
-      }
-      if (content_ != null) {
-        output.writeMessage(2, getContent());
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getContentTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contentType_);
-      }
-      if (content_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getContent());
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof MessageContent)) {
-        return super.equals(obj);
-      }
-      MessageContent other = (MessageContent) obj;
-
-      boolean result = true;
-      result = result && getContentType()
-          .equals(other.getContentType());
-      result = result && (hasContent() == other.hasContent());
-      if (hasContent()) {
-        result = result && getContent()
-            .equals(other.getContent());
-      }
-      return result;
-    }
-
-    @Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + CONTENT_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getContentType().hashCode();
-      if (hasContent()) {
-        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-        hash = (53 * hash) + getContent().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static MessageContent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static MessageContent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static MessageContent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static MessageContent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static MessageContent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static MessageContent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static MessageContent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static MessageContent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static MessageContent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static MessageContent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(MessageContent prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @Override
-    protected Builder newBuilderForType(
-        BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * 消息体信息
      * </pre>
-     *
+     * <p>
      * Protobuf type {@code rosa.im.protobuf.MessageContent}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.MessageContent)
-        MessageContentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_descriptor;
-      }
-
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                MessageContent.class, Builder.class);
-      }
-
-      // Construct using com.xiaoshu.im.MessageInfo.MessageContent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        contentType_ = "";
-
-        if (contentBuilder_ == null) {
-          content_ = null;
-        } else {
-          content_ = null;
-          contentBuilder_ = null;
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_descriptor;
-      }
-
-      public MessageContent getDefaultInstanceForType() {
-        return MessageContent.getDefaultInstance();
-      }
-
-      public MessageContent build() {
-        MessageContent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public MessageContent buildPartial() {
-        MessageContent result = new MessageContent(this);
-        result.contentType_ = contentType_;
-        if (contentBuilder_ == null) {
-          result.content_ = content_;
-        } else {
-          result.content_ = contentBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MessageContent) {
-          return mergeFrom((MessageContent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(MessageContent other) {
-        if (other == MessageContent.getDefaultInstance()) return this;
-        if (!other.getContentType().isEmpty()) {
-          contentType_ = other.contentType_;
-          onChanged();
-        }
-        if (other.hasContent()) {
-          mergeContent(other.getContent());
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        MessageContent parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MessageContent) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private Object contentType_ = "";
-      /**
-       * <code>optional string content_type = 1;</code>
-       */
-      public String getContentType() {
-        Object ref = contentType_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          contentType_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>optional string content_type = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getContentTypeBytes() {
-        Object ref = contentType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          contentType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string content_type = 1;</code>
-       */
-      public Builder setContentType(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        contentType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string content_type = 1;</code>
-       */
-      public Builder clearContentType() {
-        
-        contentType_ = getDefaultInstance().getContentType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string content_type = 1;</code>
-       */
-      public Builder setContentTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        contentType_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Any content_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> contentBuilder_;
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public boolean hasContent() {
-        return contentBuilder_ != null || content_ != null;
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public com.google.protobuf.Any getContent() {
-        if (contentBuilder_ == null) {
-          return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
-        } else {
-          return contentBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public Builder setContent(com.google.protobuf.Any value) {
-        if (contentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          content_ = value;
-          onChanged();
-        } else {
-          contentBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public Builder setContent(
-          com.google.protobuf.Any.Builder builderForValue) {
-        if (contentBuilder_ == null) {
-          content_ = builderForValue.build();
-          onChanged();
-        } else {
-          contentBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public Builder mergeContent(com.google.protobuf.Any value) {
-        if (contentBuilder_ == null) {
-          if (content_ != null) {
-            content_ =
-              com.google.protobuf.Any.newBuilder(content_).mergeFrom(value).buildPartial();
-          } else {
-            content_ = value;
-          }
-          onChanged();
-        } else {
-          contentBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public Builder clearContent() {
-        if (contentBuilder_ == null) {
-          content_ = null;
-          onChanged();
-        } else {
-          content_ = null;
-          contentBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public com.google.protobuf.Any.Builder getContentBuilder() {
-        
-        onChanged();
-        return getContentFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
-        if (contentBuilder_ != null) {
-          return contentBuilder_.getMessageOrBuilder();
-        } else {
-          return content_ == null ?
-              com.google.protobuf.Any.getDefaultInstance() : content_;
-        }
-      }
-      /**
-       * <pre>
-       * 消息实体的payload
-       * </pre>
-       *
-       * <code>optional .google.protobuf.Any content = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
-          getContentFieldBuilder() {
-        if (contentBuilder_ == null) {
-          contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
-                  getContent(),
-                  getParentForChildren(),
-                  isClean());
-          content_ = null;
-        }
-        return contentBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.MessageContent)
-    }
-
-    // @@protoc_insertion_point(class_scope:rosa.im.protobuf.MessageContent)
-    private static final MessageContent DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new MessageContent();
-    }
-
-    public static MessageContent getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<MessageContent>
-        PARSER = new com.google.protobuf.AbstractParser<MessageContent>() {
-      public MessageContent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MessageContent(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<MessageContent> parser() {
-      return PARSER;
-    }
-
-    @Override
-    public com.google.protobuf.Parser<MessageContent> getParserForType() {
-      return PARSER;
-    }
-
-    public MessageContent getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface FileOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.File)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 接收端clientId
-     * </pre>
-     *
-     * <code>optional string to = 1;</code>
-     */
-    String getTo();
-    /**
-     * <pre>
-     * 接收端clientId
-     * </pre>
-     *
-     * <code>optional string to = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getToBytes();
-
-    /**
-     * <pre>
-     * 文件内容
-     * </pre>
-     *
-     * <code>optional bytes data = 2;</code>
-     */
-    com.google.protobuf.ByteString getData();
-
-    /**
-     * <pre>
-     * 文件名
-     * </pre>
-     *
-     * <code>optional string name = 3;</code>
-     */
-    String getName();
-    /**
-     * <pre>
-     * 文件名
-     * </pre>
-     *
-     * <code>optional string name = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <pre>
-     * 文件大小
-     * </pre>
-     *
-     * <code>optional uint64 size = 4;</code>
-     */
-    long getSize();
-
-    /**
-     * <pre>
-     * 文件类型
-     * </pre>
-     *
-     * <code>optional string type = 5;</code>
-     */
-    String getType();
-    /**
-     * <pre>
-     * 文件类型
-     * </pre>
-     *
-     * <code>optional string type = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getTypeBytes();
-  }
-  /**
-   * Protobuf type {@code rosa.im.protobuf.File}
-   */
-  public  static final class File extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:rosa.im.protobuf.File)
-      FileOrBuilder {
-    // Use File.newBuilder() to construct.
-    private File(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private File() {
-      to_ = "";
-      data_ = com.google.protobuf.ByteString.EMPTY;
-      name_ = "";
-      size_ = 0L;
-      type_ = "";
-    }
-
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private File(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
+    public static final class MessageContent extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:rosa.im.protobuf.MessageContent)
+            MessageContentOrBuilder {
+        public static final int CONTENT_TYPE_FIELD_NUMBER = 1;
+        public static final int CONTENT_FIELD_NUMBER = 2;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:rosa.im.protobuf.MessageContent)
+        private static final MessageContent DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<MessageContent>
+                PARSER = new com.google.protobuf.AbstractParser<MessageContent>() {
+            public MessageContent parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new MessageContent(input, extensionRegistry);
             }
-            case 10: {
-              String s = input.readStringRequireUtf8();
+        };
 
-              to_ = s;
-              break;
-            }
-            case 18: {
-
-              data_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 32: {
-
-              size_ = input.readUInt64();
-              break;
-            }
-            case 42: {
-              String s = input.readStringRequireUtf8();
-
-              type_ = s;
-              break;
-            }
-          }
+        static {
+            DEFAULT_INSTANCE = new MessageContent();
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        private volatile Object contentType_;
+        private com.google.protobuf.Any content_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use MessageContent.newBuilder() to construct.
+        private MessageContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private MessageContent() {
+            contentType_ = "";
+        }
+
+        private MessageContent(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            int mutable_bitField0_ = 0;
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!input.skipField(tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            String s = input.readStringRequireUtf8();
+
+                            contentType_ = s;
+                            break;
+                        }
+                        case 18: {
+                            com.google.protobuf.Any.Builder subBuilder = null;
+                            if (content_ != null) {
+                                subBuilder = content_.toBuilder();
+                            }
+                            content_ = input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+                            if (subBuilder != null) {
+                                subBuilder.mergeFrom(content_);
+                                content_ = subBuilder.buildPartial();
+                            }
+
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MessageInfo.internal_static_rosa_im_protobuf_File_descriptor;
-    }
+            return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_descriptor;
+        }
 
-    protected FieldAccessorTable
+        public static MessageContent parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static MessageContent parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static MessageContent parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static MessageContent parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static MessageContent parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static MessageContent parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static MessageContent parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static MessageContent parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static MessageContent parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static MessageContent parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(MessageContent prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static MessageContent getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<MessageContent> parser() {
+            return PARSER;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
+
+        protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MessageInfo.internal_static_rosa_im_protobuf_File_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              File.class, Builder.class);
+            return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            MessageContent.class, Builder.class);
+        }
+
+        /**
+         * <code>optional string content_type = 1;</code>
+         */
+        public String getContentType() {
+            Object ref = contentType_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                contentType_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>optional string content_type = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+        getContentTypeBytes() {
+            Object ref = contentType_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                contentType_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <pre>
+         * 消息实体的payload
+         * </pre>
+         *
+         * <code>optional .google.protobuf.Any content = 2;</code>
+         */
+        public boolean hasContent() {
+            return content_ != null;
+        }
+
+        /**
+         * <pre>
+         * 消息实体的payload
+         * </pre>
+         *
+         * <code>optional .google.protobuf.Any content = 2;</code>
+         */
+        public com.google.protobuf.Any getContent() {
+            return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+        }
+
+        /**
+         * <pre>
+         * 消息实体的payload
+         * </pre>
+         *
+         * <code>optional .google.protobuf.Any content = 2;</code>
+         */
+        public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
+            return getContent();
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getContentTypeBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contentType_);
+            }
+            if (content_ != null) {
+                output.writeMessage(2, getContent());
+            }
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getContentTypeBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contentType_);
+            }
+            if (content_ != null) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(2, getContent());
+            }
+            memoizedSize = size;
+            return size;
+        }
+
+        @Override
+        public boolean equals(final Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof MessageContent)) {
+                return super.equals(obj);
+            }
+            MessageContent other = (MessageContent) obj;
+
+            boolean result = true;
+            result = result && getContentType()
+                    .equals(other.getContentType());
+            result = result && (hasContent() == other.hasContent());
+            if (hasContent()) {
+                result = result && getContent()
+                        .equals(other.getContent());
+            }
+            return result;
+        }
+
+        @Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptorForType().hashCode();
+            hash = (37 * hash) + CONTENT_TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + getContentType().hashCode();
+            if (hasContent()) {
+                hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+                hash = (53 * hash) + getContent().hashCode();
+            }
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @Override
+        public com.google.protobuf.Parser<MessageContent> getParserForType() {
+            return PARSER;
+        }
+
+        public MessageContent getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * <pre>
+         * 消息体信息
+         * </pre>
+         * <p>
+         * Protobuf type {@code rosa.im.protobuf.MessageContent}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.MessageContent)
+                MessageContentOrBuilder {
+            private Object contentType_ = "";
+            private com.google.protobuf.Any content_ = null;
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> contentBuilder_;
+
+            // Construct using com.xiaoshu.im.MessageInfo.MessageContent.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_descriptor;
+            }
+
+            protected FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                MessageContent.class, Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                contentType_ = "";
+
+                if (contentBuilder_ == null) {
+                    content_ = null;
+                } else {
+                    content_ = null;
+                    contentBuilder_ = null;
+                }
+                return this;
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return MessageInfo.internal_static_rosa_im_protobuf_MessageContent_descriptor;
+            }
+
+            public MessageContent getDefaultInstanceForType() {
+                return MessageContent.getDefaultInstance();
+            }
+
+            public MessageContent build() {
+                MessageContent result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public MessageContent buildPartial() {
+                MessageContent result = new MessageContent(this);
+                result.contentType_ = contentType_;
+                if (contentBuilder_ == null) {
+                    result.content_ = content_;
+                } else {
+                    result.content_ = contentBuilder_.build();
+                }
+                onBuilt();
+                return result;
+            }
+
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof MessageContent) {
+                    return mergeFrom((MessageContent) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(MessageContent other) {
+                if (other == MessageContent.getDefaultInstance()) return this;
+                if (!other.getContentType().isEmpty()) {
+                    contentType_ = other.contentType_;
+                    onChanged();
+                }
+                if (other.hasContent()) {
+                    mergeContent(other.getContent());
+                }
+                onChanged();
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                MessageContent parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (MessageContent) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>optional string content_type = 1;</code>
+             */
+            public String getContentType() {
+                Object ref = contentType_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    contentType_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <code>optional string content_type = 1;</code>
+             */
+            public Builder setContentType(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                contentType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string content_type = 1;</code>
+             */
+            public com.google.protobuf.ByteString
+            getContentTypeBytes() {
+                Object ref = contentType_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    contentType_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>optional string content_type = 1;</code>
+             */
+            public Builder setContentTypeBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                contentType_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>optional string content_type = 1;</code>
+             */
+            public Builder clearContentType() {
+
+                contentType_ = getDefaultInstance().getContentType();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public boolean hasContent() {
+                return contentBuilder_ != null || content_ != null;
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public com.google.protobuf.Any getContent() {
+                if (contentBuilder_ == null) {
+                    return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+                } else {
+                    return contentBuilder_.getMessage();
+                }
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public Builder setContent(com.google.protobuf.Any value) {
+                if (contentBuilder_ == null) {
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    content_ = value;
+                    onChanged();
+                } else {
+                    contentBuilder_.setMessage(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public Builder setContent(
+                    com.google.protobuf.Any.Builder builderForValue) {
+                if (contentBuilder_ == null) {
+                    content_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    contentBuilder_.setMessage(builderForValue.build());
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public Builder mergeContent(com.google.protobuf.Any value) {
+                if (contentBuilder_ == null) {
+                    if (content_ != null) {
+                        content_ =
+                                com.google.protobuf.Any.newBuilder(content_).mergeFrom(value).buildPartial();
+                    } else {
+                        content_ = value;
+                    }
+                    onChanged();
+                } else {
+                    contentBuilder_.mergeFrom(value);
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public Builder clearContent() {
+                if (contentBuilder_ == null) {
+                    content_ = null;
+                    onChanged();
+                } else {
+                    content_ = null;
+                    contentBuilder_ = null;
+                }
+
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public com.google.protobuf.Any.Builder getContentBuilder() {
+
+                onChanged();
+                return getContentFieldBuilder().getBuilder();
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
+                if (contentBuilder_ != null) {
+                    return contentBuilder_.getMessageOrBuilder();
+                } else {
+                    return content_ == null ?
+                            com.google.protobuf.Any.getDefaultInstance() : content_;
+                }
+            }
+
+            /**
+             * <pre>
+             * 消息实体的payload
+             * </pre>
+             *
+             * <code>optional .google.protobuf.Any content = 2;</code>
+             */
+            private com.google.protobuf.SingleFieldBuilderV3<
+                    com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>
+            getContentFieldBuilder() {
+                if (contentBuilder_ == null) {
+                    contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                            com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                            getContent(),
+                            getParentForChildren(),
+                            isClean());
+                    content_ = null;
+                }
+                return contentBuilder_;
+            }
+
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.MessageContent)
+        }
+
     }
 
-    public static final int TO_FIELD_NUMBER = 1;
-    private volatile Object to_;
-    /**
-     * <pre>
-     * 接收端clientId
-     * </pre>
-     *
-     * <code>optional string to = 1;</code>
-     */
-    public String getTo() {
-      Object ref = to_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        to_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 接收端clientId
-     * </pre>
-     *
-     * <code>optional string to = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getToBytes() {
-      Object ref = to_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        to_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString data_;
-    /**
-     * <pre>
-     * 文件内容
-     * </pre>
-     *
-     * <code>optional bytes data = 2;</code>
-     */
-    public com.google.protobuf.ByteString getData() {
-      return data_;
-    }
-
-    public static final int NAME_FIELD_NUMBER = 3;
-    private volatile Object name_;
-    /**
-     * <pre>
-     * 文件名
-     * </pre>
-     *
-     * <code>optional string name = 3;</code>
-     */
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 文件名
-     * </pre>
-     *
-     * <code>optional string name = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SIZE_FIELD_NUMBER = 4;
-    private long size_;
-    /**
-     * <pre>
-     * 文件大小
-     * </pre>
-     *
-     * <code>optional uint64 size = 4;</code>
-     */
-    public long getSize() {
-      return size_;
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 5;
-    private volatile Object type_;
-    /**
-     * <pre>
-     * 文件类型
-     * </pre>
-     *
-     * <code>optional string type = 5;</code>
-     */
-    public String getType() {
-      Object ref = type_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 文件类型
-     * </pre>
-     *
-     * <code>optional string type = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
-      Object ref = type_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getToBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, to_);
-      }
-      if (!data_.isEmpty()) {
-        output.writeBytes(2, data_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
-      }
-      if (size_ != 0L) {
-        output.writeUInt64(4, size_);
-      }
-      if (!getTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, type_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getToBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, to_);
-      }
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, data_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
-      }
-      if (size_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, size_);
-      }
-      if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, type_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof File)) {
-        return super.equals(obj);
-      }
-      File other = (File) obj;
-
-      boolean result = true;
-      result = result && getTo()
-          .equals(other.getTo());
-      result = result && getData()
-          .equals(other.getData());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getSize()
-          == other.getSize());
-      result = result && getType()
-          .equals(other.getType());
-      return result;
-    }
-
-    @Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getTo().hashCode();
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getSize());
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static File parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static File parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static File parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static File parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static File parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static File parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static File parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static File parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static File parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static File parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(File prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @Override
-    protected Builder newBuilderForType(
-        BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code rosa.im.protobuf.File}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.File)
-        FileOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return MessageInfo.internal_static_rosa_im_protobuf_File_descriptor;
-      }
-
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return MessageInfo.internal_static_rosa_im_protobuf_File_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                File.class, Builder.class);
-      }
-
-      // Construct using com.xiaoshu.im.MessageInfo.File.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        to_ = "";
-
-        data_ = com.google.protobuf.ByteString.EMPTY;
-
-        name_ = "";
-
-        size_ = 0L;
-
-        type_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return MessageInfo.internal_static_rosa_im_protobuf_File_descriptor;
-      }
-
-      public File getDefaultInstanceForType() {
-        return File.getDefaultInstance();
-      }
-
-      public File build() {
-        File result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public File buildPartial() {
-        File result = new File(this);
-        result.to_ = to_;
-        result.data_ = data_;
-        result.name_ = name_;
-        result.size_ = size_;
-        result.type_ = type_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof File) {
-          return mergeFrom((File)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(File other) {
-        if (other == File.getDefaultInstance()) return this;
-        if (!other.getTo().isEmpty()) {
-          to_ = other.to_;
-          onChanged();
-        }
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (other.getSize() != 0L) {
-          setSize(other.getSize());
-        }
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        File parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (File) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private Object to_ = "";
-      /**
-       * <pre>
-       * 接收端clientId
-       * </pre>
-       *
-       * <code>optional string to = 1;</code>
-       */
-      public String getTo() {
-        Object ref = to_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          to_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 接收端clientId
-       * </pre>
-       *
-       * <code>optional string to = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getToBytes() {
-        Object ref = to_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          to_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 接收端clientId
-       * </pre>
-       *
-       * <code>optional string to = 1;</code>
-       */
-      public Builder setTo(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        to_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 接收端clientId
-       * </pre>
-       *
-       * <code>optional string to = 1;</code>
-       */
-      public Builder clearTo() {
-        
-        to_ = getDefaultInstance().getTo();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 接收端clientId
-       * </pre>
-       *
-       * <code>optional string to = 1;</code>
-       */
-      public Builder setToBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        to_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <pre>
-       * 文件内容
-       * </pre>
-       *
-       * <code>optional bytes data = 2;</code>
-       */
-      public com.google.protobuf.ByteString getData() {
-        return data_;
-      }
-      /**
-       * <pre>
-       * 文件内容
-       * </pre>
-       *
-       * <code>optional bytes data = 2;</code>
-       */
-      public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        data_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 文件内容
-       * </pre>
-       *
-       * <code>optional bytes data = 2;</code>
-       */
-      public Builder clearData() {
-        
-        data_ = getDefaultInstance().getData();
-        onChanged();
-        return this;
-      }
-
-      private Object name_ = "";
-      /**
-       * <pre>
-       * 文件名
-       * </pre>
-       *
-       * <code>optional string name = 3;</code>
-       */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 文件名
-       * </pre>
-       *
-       * <code>optional string name = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 文件名
-       * </pre>
-       *
-       * <code>optional string name = 3;</code>
-       */
-      public Builder setName(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 文件名
-       * </pre>
-       *
-       * <code>optional string name = 3;</code>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 文件名
-       * </pre>
-       *
-       * <code>optional string name = 3;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long size_ ;
-      /**
-       * <pre>
-       * 文件大小
-       * </pre>
-       *
-       * <code>optional uint64 size = 4;</code>
-       */
-      public long getSize() {
-        return size_;
-      }
-      /**
-       * <pre>
-       * 文件大小
-       * </pre>
-       *
-       * <code>optional uint64 size = 4;</code>
-       */
-      public Builder setSize(long value) {
-        
-        size_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 文件大小
-       * </pre>
-       *
-       * <code>optional uint64 size = 4;</code>
-       */
-      public Builder clearSize() {
-        
-        size_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private Object type_ = "";
-      /**
-       * <pre>
-       * 文件类型
-       * </pre>
-       *
-       * <code>optional string type = 5;</code>
-       */
-      public String getType() {
-        Object ref = type_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 文件类型
-       * </pre>
-       *
-       * <code>optional string type = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTypeBytes() {
-        Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 文件类型
-       * </pre>
-       *
-       * <code>optional string type = 5;</code>
-       */
-      public Builder setType(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 文件类型
-       * </pre>
-       *
-       * <code>optional string type = 5;</code>
-       */
-      public Builder clearType() {
-        
-        type_ = getDefaultInstance().getType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 文件类型
-       * </pre>
-       *
-       * <code>optional string type = 5;</code>
-       */
-      public Builder setTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.File)
-    }
-
-    // @@protoc_insertion_point(class_scope:rosa.im.protobuf.File)
-    private static final File DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new File();
-    }
-
-    public static File getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<File>
-        PARSER = new com.google.protobuf.AbstractParser<File>() {
-      public File parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new File(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<File> parser() {
-      return PARSER;
-    }
-
-    @Override
-    public com.google.protobuf.Parser<File> getParserForType() {
-      return PARSER;
-    }
-
-    public File getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AuthorizationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:rosa.im.protobuf.Authorization)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 客户端Id( Unique Client Id)
-     * </pre>
-     *
-     * <code>optional string c_id = 1;</code>
-     */
-    String getCId();
-    /**
-     * <pre>
-     * 客户端Id( Unique Client Id)
-     * </pre>
-     *
-     * <code>optional string c_id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getCIdBytes();
-
-    /**
-     * <pre>
-     * 用户名称
-     * </pre>
-     *
-     * <code>optional string name = 2;</code>
-     */
-    String getName();
-    /**
-     * <pre>
-     * 用户名称
-     * </pre>
-     *
-     * <code>optional string name = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <pre>
-     *密码
-     * </pre>
-     *
-     * <code>optional string password = 3;</code>
-     */
-    String getPassword();
-    /**
-     * <pre>
-     *密码
-     * </pre>
-     *
-     * <code>optional string password = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getPasswordBytes();
-  }
-  /**
-   * Protobuf type {@code rosa.im.protobuf.Authorization}
-   */
-  public  static final class Authorization extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:rosa.im.protobuf.Authorization)
-      AuthorizationOrBuilder {
-    // Use Authorization.newBuilder() to construct.
-    private Authorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Authorization() {
-      cId_ = "";
-      name_ = "";
-      password_ = "";
-    }
-
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private Authorization(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
+    public static final class File extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:rosa.im.protobuf.File)
+            FileOrBuilder {
+        public static final int TO_FIELD_NUMBER = 1;
+        public static final int DATA_FIELD_NUMBER = 2;
+        public static final int NAME_FIELD_NUMBER = 3;
+        public static final int SIZE_FIELD_NUMBER = 4;
+        public static final int TYPE_FIELD_NUMBER = 5;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:rosa.im.protobuf.File)
+        private static final File DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<File>
+                PARSER = new com.google.protobuf.AbstractParser<File>() {
+            public File parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new File(input, extensionRegistry);
             }
-            case 10: {
-              String s = input.readStringRequireUtf8();
+        };
 
-              cId_ = s;
-              break;
-            }
-            case 18: {
-              String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              String s = input.readStringRequireUtf8();
-
-              password_ = s;
-              break;
-            }
-          }
+        static {
+            DEFAULT_INSTANCE = new File();
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+        private volatile Object to_;
+        private com.google.protobuf.ByteString data_;
+        private volatile Object name_;
+        private long size_;
+        private volatile Object type_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use File.newBuilder() to construct.
+        private File(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private File() {
+            to_ = "";
+            data_ = com.google.protobuf.ByteString.EMPTY;
+            name_ = "";
+            size_ = 0L;
+            type_ = "";
+        }
+
+        private File(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            int mutable_bitField0_ = 0;
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!input.skipField(tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            String s = input.readStringRequireUtf8();
+
+                            to_ = s;
+                            break;
+                        }
+                        case 18: {
+
+                            data_ = input.readBytes();
+                            break;
+                        }
+                        case 26: {
+                            String s = input.readStringRequireUtf8();
+
+                            name_ = s;
+                            break;
+                        }
+                        case 32: {
+
+                            size_ = input.readUInt64();
+                            break;
+                        }
+                        case 42: {
+                            String s = input.readStringRequireUtf8();
+
+                            type_ = s;
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MessageInfo.internal_static_rosa_im_protobuf_Authorization_descriptor;
-    }
+            return MessageInfo.internal_static_rosa_im_protobuf_File_descriptor;
+        }
 
-    protected FieldAccessorTable
+        public static File parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static File parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static File parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static File parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static File parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static File parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static File parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static File parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static File parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static File parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(File prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static File getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<File> parser() {
+            return PARSER;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
+
+        protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MessageInfo.internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Authorization.class, Builder.class);
-    }
+            return MessageInfo.internal_static_rosa_im_protobuf_File_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            File.class, Builder.class);
+        }
 
-    public static final int C_ID_FIELD_NUMBER = 1;
-    private volatile Object cId_;
-    /**
-     * <pre>
-     * 客户端Id( Unique Client Id)
-     * </pre>
-     *
-     * <code>optional string c_id = 1;</code>
-     */
-    public String getCId() {
-      Object ref = cId_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        cId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 客户端Id( Unique Client Id)
-     * </pre>
-     *
-     * <code>optional string c_id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getCIdBytes() {
-      Object ref = cId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        cId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
+        /**
+         * <pre>
+         * 接收端clientId
+         * </pre>
+         *
+         * <code>optional string to = 1;</code>
+         */
+        public String getTo() {
+            Object ref = to_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                to_ = s;
+                return s;
+            }
+        }
 
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile Object name_;
-    /**
-     * <pre>
-     * 用户名称
-     * </pre>
-     *
-     * <code>optional string name = 2;</code>
-     */
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 用户名称
-     * </pre>
-     *
-     * <code>optional string name = 2;</code>
-     */
-    public com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * 接收端clientId
+         * </pre>
+         *
+         * <code>optional string to = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+        getToBytes() {
+            Object ref = to_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                to_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <pre>
+         * 文件内容
+         * </pre>
+         *
+         * <code>optional bytes data = 2;</code>
+         */
+        public com.google.protobuf.ByteString getData() {
+            return data_;
+        }
+
+        /**
+         * <pre>
+         * 文件名
+         * </pre>
+         *
+         * <code>optional string name = 3;</code>
+         */
+        public String getName() {
+            Object ref = name_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 文件名
+         * </pre>
+         *
+         * <code>optional string name = 3;</code>
+         */
+        public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+            Object ref = name_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <pre>
+         * 文件大小
+         * </pre>
+         *
+         * <code>optional uint64 size = 4;</code>
+         */
+        public long getSize() {
+            return size_;
+        }
+
+        /**
+         * <pre>
+         * 文件类型
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         */
+        public String getType() {
+            Object ref = type_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                type_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 文件类型
+         * </pre>
+         *
+         * <code>optional string type = 5;</code>
+         */
+        public com.google.protobuf.ByteString
+        getTypeBytes() {
+            Object ref = type_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                type_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getToBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, to_);
+            }
+            if (!data_.isEmpty()) {
+                output.writeBytes(2, data_);
+            }
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+            }
+            if (size_ != 0L) {
+                output.writeUInt64(4, size_);
+            }
+            if (!getTypeBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 5, type_);
+            }
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getToBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, to_);
+            }
+            if (!data_.isEmpty()) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(2, data_);
+            }
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+            }
+            if (size_ != 0L) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeUInt64Size(4, size_);
+            }
+            if (!getTypeBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, type_);
+            }
+            memoizedSize = size;
+            return size;
+        }
+
+        @Override
+        public boolean equals(final Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof File)) {
+                return super.equals(obj);
+            }
+            File other = (File) obj;
+
+            boolean result = true;
+            result = result && getTo()
+                    .equals(other.getTo());
+            result = result && getData()
+                    .equals(other.getData());
+            result = result && getName()
+                    .equals(other.getName());
+            result = result && (getSize()
+                    == other.getSize());
+            result = result && getType()
+                    .equals(other.getType());
+            return result;
+        }
+
+        @Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptorForType().hashCode();
+            hash = (37 * hash) + TO_FIELD_NUMBER;
+            hash = (53 * hash) + getTo().hashCode();
+            hash = (37 * hash) + DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getData().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (37 * hash) + SIZE_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+                    getSize());
+            hash = (37 * hash) + TYPE_FIELD_NUMBER;
+            hash = (53 * hash) + getType().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @Override
+        public com.google.protobuf.Parser<File> getParserForType() {
+            return PARSER;
+        }
+
+        public File getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * Protobuf type {@code rosa.im.protobuf.File}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.File)
+                FileOrBuilder {
+            private Object to_ = "";
+            private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+            private Object name_ = "";
+            private long size_;
+            private Object type_ = "";
+
+            // Construct using com.xiaoshu.im.MessageInfo.File.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return MessageInfo.internal_static_rosa_im_protobuf_File_descriptor;
+            }
+
+            protected FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return MessageInfo.internal_static_rosa_im_protobuf_File_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                File.class, Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                to_ = "";
+
+                data_ = com.google.protobuf.ByteString.EMPTY;
+
+                name_ = "";
+
+                size_ = 0L;
+
+                type_ = "";
+
+                return this;
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return MessageInfo.internal_static_rosa_im_protobuf_File_descriptor;
+            }
+
+            public File getDefaultInstanceForType() {
+                return File.getDefaultInstance();
+            }
+
+            public File build() {
+                File result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public File buildPartial() {
+                File result = new File(this);
+                result.to_ = to_;
+                result.data_ = data_;
+                result.name_ = name_;
+                result.size_ = size_;
+                result.type_ = type_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof File) {
+                    return mergeFrom((File) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(File other) {
+                if (other == File.getDefaultInstance()) return this;
+                if (!other.getTo().isEmpty()) {
+                    to_ = other.to_;
+                    onChanged();
+                }
+                if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+                    setData(other.getData());
+                }
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                if (other.getSize() != 0L) {
+                    setSize(other.getSize());
+                }
+                if (!other.getType().isEmpty()) {
+                    type_ = other.type_;
+                    onChanged();
+                }
+                onChanged();
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                File parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (File) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 接收端clientId
+             * </pre>
+             *
+             * <code>optional string to = 1;</code>
+             */
+            public String getTo() {
+                Object ref = to_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    to_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 接收端clientId
+             * </pre>
+             *
+             * <code>optional string to = 1;</code>
+             */
+            public Builder setTo(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 接收端clientId
+             * </pre>
+             *
+             * <code>optional string to = 1;</code>
+             */
+            public com.google.protobuf.ByteString
+            getToBytes() {
+                Object ref = to_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    to_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 接收端clientId
+             * </pre>
+             *
+             * <code>optional string to = 1;</code>
+             */
+            public Builder setToBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                to_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 接收端clientId
+             * </pre>
+             *
+             * <code>optional string to = 1;</code>
+             */
+            public Builder clearTo() {
+
+                to_ = getDefaultInstance().getTo();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件内容
+             * </pre>
+             *
+             * <code>optional bytes data = 2;</code>
+             */
+            public com.google.protobuf.ByteString getData() {
+                return data_;
+            }
+
+            /**
+             * <pre>
+             * 文件内容
+             * </pre>
+             *
+             * <code>optional bytes data = 2;</code>
+             */
+            public Builder setData(com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                data_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件内容
+             * </pre>
+             *
+             * <code>optional bytes data = 2;</code>
+             */
+            public Builder clearData() {
+
+                data_ = getDefaultInstance().getData();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件名
+             * </pre>
+             *
+             * <code>optional string name = 3;</code>
+             */
+            public String getName() {
+                Object ref = name_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 文件名
+             * </pre>
+             *
+             * <code>optional string name = 3;</code>
+             */
+            public Builder setName(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件名
+             * </pre>
+             *
+             * <code>optional string name = 3;</code>
+             */
+            public com.google.protobuf.ByteString
+            getNameBytes() {
+                Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 文件名
+             * </pre>
+             *
+             * <code>optional string name = 3;</code>
+             */
+            public Builder setNameBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件名
+             * </pre>
+             *
+             * <code>optional string name = 3;</code>
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件大小
+             * </pre>
+             *
+             * <code>optional uint64 size = 4;</code>
+             */
+            public long getSize() {
+                return size_;
+            }
+
+            /**
+             * <pre>
+             * 文件大小
+             * </pre>
+             *
+             * <code>optional uint64 size = 4;</code>
+             */
+            public Builder setSize(long value) {
+
+                size_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件大小
+             * </pre>
+             *
+             * <code>optional uint64 size = 4;</code>
+             */
+            public Builder clearSize() {
+
+                size_ = 0L;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件类型
+             * </pre>
+             *
+             * <code>optional string type = 5;</code>
+             */
+            public String getType() {
+                Object ref = type_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    type_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 文件类型
+             * </pre>
+             *
+             * <code>optional string type = 5;</code>
+             */
+            public Builder setType(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                type_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件类型
+             * </pre>
+             *
+             * <code>optional string type = 5;</code>
+             */
+            public com.google.protobuf.ByteString
+            getTypeBytes() {
+                Object ref = type_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    type_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 文件类型
+             * </pre>
+             *
+             * <code>optional string type = 5;</code>
+             */
+            public Builder setTypeBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                type_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 文件类型
+             * </pre>
+             *
+             * <code>optional string type = 5;</code>
+             */
+            public Builder clearType() {
+
+                type_ = getDefaultInstance().getType();
+                onChanged();
+                return this;
+            }
+
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.File)
+        }
+
     }
 
-    public static final int PASSWORD_FIELD_NUMBER = 3;
-    private volatile Object password_;
-    /**
-     * <pre>
-     *密码
-     * </pre>
-     *
-     * <code>optional string password = 3;</code>
-     */
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        password_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *密码
-     * </pre>
-     *
-     * <code>optional string password = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        password_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getCIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cId_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!getPasswordBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getCIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cId_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!getPasswordBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    public boolean equals(final Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof Authorization)) {
-        return super.equals(obj);
-      }
-      Authorization other = (Authorization) obj;
-
-      boolean result = true;
-      result = result && getCId()
-          .equals(other.getCId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getPassword()
-          .equals(other.getPassword());
-      return result;
-    }
-
-    @Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + C_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
-      hash = (53 * hash) + getPassword().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static Authorization parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Authorization parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Authorization parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static Authorization parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static Authorization parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Authorization parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Authorization parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static Authorization parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static Authorization parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static Authorization parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(Authorization prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @Override
-    protected Builder newBuilderForType(
-        BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code rosa.im.protobuf.Authorization}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.Authorization)
-        AuthorizationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Authorization_descriptor;
-      }
-
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Authorization.class, Builder.class);
-      }
-
-      // Construct using com.xiaoshu.im.MessageInfo.Authorization.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        cId_ = "";
-
-        name_ = "";
-
-        password_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return MessageInfo.internal_static_rosa_im_protobuf_Authorization_descriptor;
-      }
-
-      public Authorization getDefaultInstanceForType() {
-        return Authorization.getDefaultInstance();
-      }
-
-      public Authorization build() {
-        Authorization result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public Authorization buildPartial() {
-        Authorization result = new Authorization(this);
-        result.cId_ = cId_;
-        result.name_ = name_;
-        result.password_ = password_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Authorization) {
-          return mergeFrom((Authorization)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(Authorization other) {
-        if (other == Authorization.getDefaultInstance()) return this;
-        if (!other.getCId().isEmpty()) {
-          cId_ = other.cId_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getPassword().isEmpty()) {
-          password_ = other.password_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        Authorization parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Authorization) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private Object cId_ = "";
-      /**
-       * <pre>
-       * 客户端Id( Unique Client Id)
-       * </pre>
-       *
-       * <code>optional string c_id = 1;</code>
-       */
-      public String getCId() {
-        Object ref = cId_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          cId_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 客户端Id( Unique Client Id)
-       * </pre>
-       *
-       * <code>optional string c_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getCIdBytes() {
-        Object ref = cId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          cId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 客户端Id( Unique Client Id)
-       * </pre>
-       *
-       * <code>optional string c_id = 1;</code>
-       */
-      public Builder setCId(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 客户端Id( Unique Client Id)
-       * </pre>
-       *
-       * <code>optional string c_id = 1;</code>
-       */
-      public Builder clearCId() {
-        
-        cId_ = getDefaultInstance().getCId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 客户端Id( Unique Client Id)
-       * </pre>
-       *
-       * <code>optional string c_id = 1;</code>
-       */
-      public Builder setCIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object name_ = "";
-      /**
-       * <pre>
-       * 用户名称
-       * </pre>
-       *
-       * <code>optional string name = 2;</code>
-       */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 用户名称
-       * </pre>
-       *
-       * <code>optional string name = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 用户名称
-       * </pre>
-       *
-       * <code>optional string name = 2;</code>
-       */
-      public Builder setName(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 用户名称
-       * </pre>
-       *
-       * <code>optional string name = 2;</code>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 用户名称
-       * </pre>
-       *
-       * <code>optional string name = 2;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object password_ = "";
-      /**
-       * <pre>
-       *密码
-       * </pre>
-       *
-       * <code>optional string password = 3;</code>
-       */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          password_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *密码
-       * </pre>
-       *
-       * <code>optional string password = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPasswordBytes() {
-        Object ref = password_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          password_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *密码
-       * </pre>
-       *
-       * <code>optional string password = 3;</code>
-       */
-      public Builder setPassword(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        password_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *密码
-       * </pre>
-       *
-       * <code>optional string password = 3;</code>
-       */
-      public Builder clearPassword() {
-        
-        password_ = getDefaultInstance().getPassword();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *密码
-       * </pre>
-       *
-       * <code>optional string password = 3;</code>
-       */
-      public Builder setPasswordBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        password_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.Authorization)
-    }
-
-    // @@protoc_insertion_point(class_scope:rosa.im.protobuf.Authorization)
-    private static final Authorization DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new Authorization();
-    }
-
-    public static Authorization getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Authorization>
-        PARSER = new com.google.protobuf.AbstractParser<Authorization>() {
-      public Authorization parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Authorization(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Authorization> parser() {
-      return PARSER;
-    }
-
-    @Override
-    public com.google.protobuf.Parser<Authorization> getParserForType() {
-      return PARSER;
-    }
-
-    public Authorization getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public static final int VERSION_FIELD_NUMBER = 51234;
-  /**
-   * <code>extend .google.protobuf.MessageOptions { ... }</code>
-   */
-  public static final
-    com.google.protobuf.GeneratedMessage.GeneratedExtension<
-      com.google.protobuf.DescriptorProtos.MessageOptions,
-      String> version = com.google.protobuf.GeneratedMessage
-          .newFileScopedGeneratedExtension(
-        String.class,
-        null);
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rosa_im_protobuf_Version_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rosa_im_protobuf_Version_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rosa_im_protobuf_Message_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rosa_im_protobuf_Message_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rosa_im_protobuf_MessageContent_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rosa_im_protobuf_File_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rosa_im_protobuf_File_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rosa_im_protobuf_Authorization_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    String[] descriptorData = {
-      "\n\021MessageInfo.proto\022\020rosa.im.protobuf\032\031g" +
-      "oogle/protobuf/any.proto\032 google/protobu" +
-      "f/descriptor.proto\"\024\n\007Version:\t\222\202\031\0051.0.0" +
-      "\"\312\001\n\007Message\022\014\n\004g_id\030\001 \001(\t\022,\n\004type\030\002 \001(\016" +
-      "2\036.rosa.im.protobuf.Message.Type\0229\n\017mess" +
-      "age_content\030\003 \001(\0132 .rosa.im.protobuf.Mes" +
-      "sageContent\022\030\n\020protocol_version\030\004 \001(\t\".\n" +
-      "\004Type\022\010\n\004FILE\020\000\022\010\n\004PING\020\001\022\010\n\004PONG\020\002\022\010\n\004A" +
-      "UTH\020\003\"M\n\016MessageContent\022\024\n\014content_type\030" +
-      "\001 \001(\t\022%\n\007content\030\002 \001(\0132\024.google.protobuf",
-      ".Any\"J\n\004File\022\n\n\002to\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\022\014" +
-      "\n\004name\030\003 \001(\t\022\014\n\004size\030\004 \001(\004\022\014\n\004type\030\005 \001(\t" +
-      "\"=\n\rAuthorization\022\014\n\004c_id\030\001 \001(\t\022\014\n\004name\030" +
-      "\002 \001(\t\022\020\n\010password\030\003 \001(\t:2\n\007version\022\037.goo" +
-      "gle.protobuf.MessageOptions\030\242\220\003 \001(\tB\035\n\016c" +
-      "om.xiaoshu.imB\013MessageInfob\006proto3"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
+    public static final class Authorization extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:rosa.im.protobuf.Authorization)
+            AuthorizationOrBuilder {
+        public static final int C_ID_FIELD_NUMBER = 1;
+        public static final int NAME_FIELD_NUMBER = 2;
+        public static final int PASSWORD_FIELD_NUMBER = 3;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:rosa.im.protobuf.Authorization)
+        private static final Authorization DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<Authorization>
+                PARSER = new com.google.protobuf.AbstractParser<Authorization>() {
+            public Authorization parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new Authorization(input, extensionRegistry);
+            }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.AnyProto.getDescriptor(),
-          com.google.protobuf.DescriptorProtos.getDescriptor(),
-        }, assigner);
-    internal_static_rosa_im_protobuf_Version_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_rosa_im_protobuf_Version_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rosa_im_protobuf_Version_descriptor,
-        new String[] { });
-    internal_static_rosa_im_protobuf_Message_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_rosa_im_protobuf_Message_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rosa_im_protobuf_Message_descriptor,
-        new String[] { "GId", "Type", "MessageContent", "ProtocolVersion", });
-    internal_static_rosa_im_protobuf_MessageContent_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_rosa_im_protobuf_MessageContent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rosa_im_protobuf_MessageContent_descriptor,
-        new String[] { "ContentType", "Content", });
-    internal_static_rosa_im_protobuf_File_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_rosa_im_protobuf_File_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rosa_im_protobuf_File_descriptor,
-        new String[] { "To", "Data", "Name", "Size", "Type", });
-    internal_static_rosa_im_protobuf_Authorization_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rosa_im_protobuf_Authorization_descriptor,
-        new String[] { "CId", "Name", "Password", });
-    version.internalInit(descriptor.getExtensions().get(0));
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(MessageInfo.version);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.AnyProto.getDescriptor();
-    com.google.protobuf.DescriptorProtos.getDescriptor();
-  }
 
-  // @@protoc_insertion_point(outer_class_scope)
+        static {
+            DEFAULT_INSTANCE = new Authorization();
+        }
+
+        private volatile Object cId_;
+        private volatile Object name_;
+        private volatile Object password_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use Authorization.newBuilder() to construct.
+        private Authorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+
+        private Authorization() {
+            cId_ = "";
+            name_ = "";
+            password_ = "";
+        }
+
+        private Authorization(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            int mutable_bitField0_ = 0;
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        default: {
+                            if (!input.skipField(tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                        case 10: {
+                            String s = input.readStringRequireUtf8();
+
+                            cId_ = s;
+                            break;
+                        }
+                        case 18: {
+                            String s = input.readStringRequireUtf8();
+
+                            name_ = s;
+                            break;
+                        }
+                        case 26: {
+                            String s = input.readStringRequireUtf8();
+
+                            password_ = s;
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return MessageInfo.internal_static_rosa_im_protobuf_Authorization_descriptor;
+        }
+
+        public static Authorization parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static Authorization parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static Authorization parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static Authorization parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static Authorization parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static Authorization parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Authorization parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static Authorization parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Authorization parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static Authorization parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(Authorization prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static Authorization getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<Authorization> parser() {
+            return PARSER;
+        }
+
+        @Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+        }
+
+        protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return MessageInfo.internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            Authorization.class, Builder.class);
+        }
+
+        /**
+         * <pre>
+         * 客户端Id( Unique Client Id)
+         * </pre>
+         *
+         * <code>optional string c_id = 1;</code>
+         */
+        public String getCId() {
+            Object ref = cId_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                cId_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 客户端Id( Unique Client Id)
+         * </pre>
+         *
+         * <code>optional string c_id = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+        getCIdBytes() {
+            Object ref = cId_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                cId_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>optional string name = 2;</code>
+         */
+        public String getName() {
+            Object ref = name_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                name_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>optional string name = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+        getNameBytes() {
+            Object ref = name_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                name_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        /**
+         * <pre>
+         * 密码
+         * </pre>
+         *
+         * <code>optional string password = 3;</code>
+         */
+        public String getPassword() {
+            Object ref = password_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                password_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <pre>
+         * 密码
+         * </pre>
+         *
+         * <code>optional string password = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+        getPasswordBytes() {
+            Object ref = password_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (String) ref);
+                password_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getCIdBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cId_);
+            }
+            if (!getNameBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+            }
+            if (!getPasswordBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+            }
+        }
+
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getCIdBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cId_);
+            }
+            if (!getNameBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+            }
+            if (!getPasswordBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+            }
+            memoizedSize = size;
+            return size;
+        }
+
+        @Override
+        public boolean equals(final Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof Authorization)) {
+                return super.equals(obj);
+            }
+            Authorization other = (Authorization) obj;
+
+            boolean result = true;
+            result = result && getCId()
+                    .equals(other.getCId());
+            result = result && getName()
+                    .equals(other.getName());
+            result = result && getPassword()
+                    .equals(other.getPassword());
+            return result;
+        }
+
+        @Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptorForType().hashCode();
+            hash = (37 * hash) + C_ID_FIELD_NUMBER;
+            hash = (53 * hash) + getCId().hashCode();
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+            hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+            hash = (53 * hash) + getPassword().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @Override
+        protected Builder newBuilderForType(
+                BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @Override
+        public com.google.protobuf.Parser<Authorization> getParserForType() {
+            return PARSER;
+        }
+
+        public Authorization getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * Protobuf type {@code rosa.im.protobuf.Authorization}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:rosa.im.protobuf.Authorization)
+                AuthorizationOrBuilder {
+            private Object cId_ = "";
+            private Object name_ = "";
+            private Object password_ = "";
+
+            // Construct using com.xiaoshu.im.MessageInfo.Authorization.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Authorization_descriptor;
+            }
+
+            protected FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Authorization_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                Authorization.class, Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            public Builder clear() {
+                super.clear();
+                cId_ = "";
+
+                name_ = "";
+
+                password_ = "";
+
+                return this;
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return MessageInfo.internal_static_rosa_im_protobuf_Authorization_descriptor;
+            }
+
+            public Authorization getDefaultInstanceForType() {
+                return Authorization.getDefaultInstance();
+            }
+
+            public Authorization build() {
+                Authorization result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            public Authorization buildPartial() {
+                Authorization result = new Authorization(this);
+                result.cId_ = cId_;
+                result.name_ = name_;
+                result.password_ = password_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof Authorization) {
+                    return mergeFrom((Authorization) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(Authorization other) {
+                if (other == Authorization.getDefaultInstance()) return this;
+                if (!other.getCId().isEmpty()) {
+                    cId_ = other.cId_;
+                    onChanged();
+                }
+                if (!other.getName().isEmpty()) {
+                    name_ = other.name_;
+                    onChanged();
+                }
+                if (!other.getPassword().isEmpty()) {
+                    password_ = other.password_;
+                    onChanged();
+                }
+                onChanged();
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                Authorization parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (Authorization) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 客户端Id( Unique Client Id)
+             * </pre>
+             *
+             * <code>optional string c_id = 1;</code>
+             */
+            public String getCId() {
+                Object ref = cId_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    cId_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 客户端Id( Unique Client Id)
+             * </pre>
+             *
+             * <code>optional string c_id = 1;</code>
+             */
+            public Builder setCId(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                cId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 客户端Id( Unique Client Id)
+             * </pre>
+             *
+             * <code>optional string c_id = 1;</code>
+             */
+            public com.google.protobuf.ByteString
+            getCIdBytes() {
+                Object ref = cId_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    cId_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 客户端Id( Unique Client Id)
+             * </pre>
+             *
+             * <code>optional string c_id = 1;</code>
+             */
+            public Builder setCIdBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                cId_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 客户端Id( Unique Client Id)
+             * </pre>
+             *
+             * <code>optional string c_id = 1;</code>
+             */
+            public Builder clearCId() {
+
+                cId_ = getDefaultInstance().getCId();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 用户名称
+             * </pre>
+             *
+             * <code>optional string name = 2;</code>
+             */
+            public String getName() {
+                Object ref = name_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    name_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 用户名称
+             * </pre>
+             *
+             * <code>optional string name = 2;</code>
+             */
+            public Builder setName(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 用户名称
+             * </pre>
+             *
+             * <code>optional string name = 2;</code>
+             */
+            public com.google.protobuf.ByteString
+            getNameBytes() {
+                Object ref = name_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    name_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 用户名称
+             * </pre>
+             *
+             * <code>optional string name = 2;</code>
+             */
+            public Builder setNameBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                name_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 用户名称
+             * </pre>
+             *
+             * <code>optional string name = 2;</code>
+             */
+            public Builder clearName() {
+
+                name_ = getDefaultInstance().getName();
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 密码
+             * </pre>
+             *
+             * <code>optional string password = 3;</code>
+             */
+            public String getPassword() {
+                Object ref = password_;
+                if (!(ref instanceof String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    String s = bs.toStringUtf8();
+                    password_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 密码
+             * </pre>
+             *
+             * <code>optional string password = 3;</code>
+             */
+            public Builder setPassword(
+                    String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                password_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 密码
+             * </pre>
+             *
+             * <code>optional string password = 3;</code>
+             */
+            public com.google.protobuf.ByteString
+            getPasswordBytes() {
+                Object ref = password_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (String) ref);
+                    password_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <pre>
+             * 密码
+             * </pre>
+             *
+             * <code>optional string password = 3;</code>
+             */
+            public Builder setPasswordBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                password_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * 密码
+             * </pre>
+             *
+             * <code>optional string password = 3;</code>
+             */
+            public Builder clearPassword() {
+
+                password_ = getDefaultInstance().getPassword();
+                onChanged();
+                return this;
+            }
+
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return this;
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:rosa.im.protobuf.Authorization)
+        }
+
+    }
+
+    // @@protoc_insertion_point(outer_class_scope)
 }

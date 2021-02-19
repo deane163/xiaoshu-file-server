@@ -11,8 +11,9 @@ import org.springframework.context.ConfigurableApplicationContext;
  * （1） 将图片传递给目标客户端；(实现一个图片透传功能)
  * （2） 保持心跳信息；
  * （3） 使用protobuf消息编解码器；
- *
+ * <p>
  * 参考： https://gitee.com/zjz0812/heart-netty
+ *
  * @ com.xiaoshu
  * <p>
  * Original @Author: deane.jia-贾亮亮,@2021/2/9@11:08

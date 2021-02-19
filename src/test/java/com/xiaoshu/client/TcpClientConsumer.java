@@ -41,16 +41,16 @@ public class TcpClientConsumer {
         bootstrap.option(ChannelOption.SO_KEEPALIVE, true)
                 .option(ChannelOption.TCP_NODELAY, true)
                 .handler(new TestImClientChannelInitializer());
-        try{
+        try {
             ChannelFuture channelFuture = bootstrap.connect(address, port);
             clientChannel = channelFuture.channel();
             clientChannel.writeAndFlush(createAuthMessage());
             // 添加断线重连功能实现；
-            channelFuture.addListener((ChannelFuture futureListener)->{
+            channelFuture.addListener((ChannelFuture futureListener) -> {
                 EventLoop eventLoop = futureListener.channel().eventLoop();
-                if(!futureListener.isSuccess()){
+                if (!futureListener.isSuccess()) {
                     System.out.println("Fail to connect to Server, reconnect after 5 seconds!");
-                    eventLoop.schedule(()-> doConnect(address, port), 5, TimeUnit.SECONDS );
+                    eventLoop.schedule(() -> doConnect(address, port), 5, TimeUnit.SECONDS);
                 }
             });
             channelFuture.sync();
@@ -64,6 +64,7 @@ public class TcpClientConsumer {
 
     /**
      * 创建客户端连接，并发送消息到服务器端；
+     *
      * @param args
      * @throws InterruptedException
      */
@@ -73,6 +74,7 @@ public class TcpClientConsumer {
 
     /**
      * 创建protobuf类型Message
+     *
      * @return
      */
     private static MessageInfo.Message createAuthMessage() {

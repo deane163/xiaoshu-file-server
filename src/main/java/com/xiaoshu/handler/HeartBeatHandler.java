@@ -1,7 +1,9 @@
 package com.xiaoshu.handler;
 
-import cn.hutool.core.util.StrUtil;
+import cn.hutool.core.util.ObjectUtil;
 import com.xiaoshu.component.ChannelRepository;
+import com.xiaoshu.event.EventHandler;
+import com.xiaoshu.event.EventHandlerFactory;
 import com.xiaoshu.im.MessageInfo;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -29,6 +31,9 @@ public class HeartBeatHandler extends SimpleChannelInboundHandler<MessageInfo.Me
     @Autowired
     private ChannelRepository channelRepository;
 
+    @Autowired
+    private EventHandlerFactory eventHandlerFactory;
+
     /**
      * 空闲触发器 心跳基于空闲实现
      *
@@ -43,15 +48,11 @@ public class HeartBeatHandler extends SimpleChannelInboundHandler<MessageInfo.Me
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageInfo.Message msg) throws Exception {
-        // 将数据转发到下一个Handler进行处理
-        if (msg.getType().equals(MessageInfo.Message.Type.AUTH)) {
-            MessageInfo.Authorization authorization = msg.getMessageContent().getContent().unpack(MessageInfo.Authorization.class);
-            String clientId = authorization.getCId();
-            if (StrUtil.isNotEmpty(clientId)) {
-                log.info("[添加Channel]clientId:{} 添加客户端Channel:{}", clientId, ctx.channel().remoteAddress());
-                channelRepository.put(clientId, ctx.channel());
-            }
+        EventHandler eventHandler = eventHandlerFactory.getEventHandler(msg.getType());
+        if (ObjectUtil.isNotEmpty(eventHandler)) {
+            eventHandler.handlerEvent(ctx, msg);
         } else {
+            // 如果没有处理该消息类型的Handler，则直接将消息发送给下一个Handler进行处理；
             ctx.fireChannelRead(msg);
         }
         ReferenceCountUtil.release(msg);

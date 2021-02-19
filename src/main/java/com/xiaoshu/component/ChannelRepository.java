@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * 功能说明： 此类为工具类，根据客户端Id，把数据通道放入到对应的 value，相当于做一个绑定关系；
@@ -52,5 +53,17 @@ public class ChannelRepository {
      */
     public int size() {
         return channelCache.size();
+    }
+
+
+    public boolean isChannelExists(Channel channel) {
+        AtomicBoolean flag = new AtomicBoolean(false);
+        channelCache.forEach((key, value) -> {
+            if (value.equals(channel)) {
+                flag.set(true);
+                return;
+            }
+        });
+        return flag.get();
     }
 }

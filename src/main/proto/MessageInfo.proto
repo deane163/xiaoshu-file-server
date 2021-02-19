@@ -37,7 +37,7 @@ message MessageContent {
 }
 
 message File {
-    string to = 1;  // 接收端clientId
+    string to = 1; // 接收端clientId
     bytes data = 2; // 文件内容
     string name = 3; // 文件名
     uint64 size = 4; // 文件大小
