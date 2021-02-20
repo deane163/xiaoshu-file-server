@@ -1,7 +1,7 @@
 package com.xiaoshu.controller;
 
-import com.xiaoshu.model.Result;
 import com.xiaoshu.model.ResultCode;
+import com.xiaoshu.model.ResultVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -22,14 +22,14 @@ public class MainController {
 
 
     @GetMapping(value = "/online/{userId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Result<String> getUserOnlineStatus(@PathVariable String userId){
+    public ResultVo<String> getUserOnlineStatus(@PathVariable String userId) {
         // TODO
-        return new Result(ResultCode.SUCCESS, null);
+        return new ResultVo(ResultCode.SUCCESS, null);
     }
 
     @DeleteMapping(value = "/remove/{userId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Result<String> removeClientByUserId (@PathVariable String userId){
+    public ResultVo<String> removeClientByUserId(@PathVariable String userId) {
         // TODO
-        return new Result(ResultCode.SUCCESS, null);
+        return new ResultVo(ResultCode.SUCCESS, null);
     }
 }

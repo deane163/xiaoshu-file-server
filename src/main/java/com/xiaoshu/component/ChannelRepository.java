@@ -58,6 +58,7 @@ public class ChannelRepository {
 
     /**
      * 判断Channel是否已经存在
+     *
      * @param channel
      * @return
      */

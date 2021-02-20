@@ -60,9 +60,6 @@ public class MessageInfoHandler extends SimpleChannelInboundHandler<MessageInfo.
             // TODO （集群情况下）如果接收端在线，但是接收端没有在本节点，需要将数据转发到其它节点上；(手动处理)
             ctx.fireChannelRead(msg);
         }
-
-
-
     }
 
     @Override

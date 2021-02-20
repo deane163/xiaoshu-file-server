@@ -53,9 +53,9 @@ public class TcpClientProducer {
             Thread.sleep(30000);
             System.out.println("[开始发送文件数据]");
             clientChannel.writeAndFlush(createMessage());
-            channelFuture.addListener((ChannelFuture futureListener) -> {
-                EventLoop eventLoop = futureListener.channel().eventLoop();
-                if (!futureListener.isSuccess()) {
+            channelFuture.addListener((ChannelFuture cf) -> {
+                EventLoop eventLoop = cf.channel().eventLoop();
+                if (!cf.isSuccess()) {
                     System.out.println("Fail to connect to Server, reconnect after 5 seconds!");
                     eventLoop.schedule(() -> doConnect(address, port), 5, TimeUnit.SECONDS);
                 }
@@ -109,9 +109,8 @@ public class TcpClientProducer {
         MessageInfo.Message.Builder builder = MessageInfo.Message.newBuilder();
         builder.setGId("000000" + System.currentTimeMillis());
         builder.setType(MessageInfo.Message.Type.FILE);
-
+        // 创建内容信息；
         MessageInfo.MessageContent.Builder contentBuilder = MessageInfo.MessageContent.newBuilder();
-
         MessageInfo.File.Builder fileBuilder = MessageInfo.File.newBuilder();
         byte[] conBytes = FileUtil.readBytes("D:/temp/image.jpg");
         fileBuilder.setData(ByteString.copyFrom(conBytes));

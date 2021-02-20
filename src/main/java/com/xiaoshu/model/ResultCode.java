@@ -36,16 +36,16 @@ public enum ResultCode {
 
     private String message;
 
-    public int code(){
+    ResultCode(int code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    public int code() {
         return this.code;
     }
 
     public String message() {
         return this.message;
-    }
-
-    ResultCode(int code, String message) {
-        this.code = code;
-        this.message = message;
     }
 }

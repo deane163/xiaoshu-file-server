@@ -32,8 +32,7 @@ import java.io.Serializable;
  * Copyright (C)2013-2021 小树盛凯科技 All rights reserved.
  */
 @Data
-public class Result<T> implements Serializable {
-
+public class ResultVo<T> implements Serializable {
 
     int code;
 
@@ -41,13 +40,13 @@ public class Result<T> implements Serializable {
 
     T data;
 
-    public Result(ResultCode resultCode,  T data) {
+    public ResultVo(ResultCode resultCode, T data) {
         this.code = resultCode.code();
         this.message = resultCode.message();
         this.data = data;
     }
 
-    public Result(int code, String message, T data) {
+    public ResultVo(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
