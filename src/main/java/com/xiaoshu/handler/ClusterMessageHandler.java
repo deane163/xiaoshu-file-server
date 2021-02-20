@@ -21,9 +21,17 @@ import org.springframework.stereotype.Component;
 @ChannelHandler.Sharable
 public class ClusterMessageHandler extends SimpleChannelInboundHandler<MessageInfo.Message> {
 
+    /**
+     * 负责集群之间的数据转发操作；（如果接收的客户端不再本节点时，将数据发送到集群中的其它节点上）
+     *
+     * @param ctx
+     * @param msg
+     * @throws Exception
+     */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageInfo.Message msg) throws Exception {
         // TODO 客户端在线，但是客户端没有连接到当前节点时，将数据转发到其它节点上；
         log.info("[数据转发操作]将数据转发到另外一个节点上");
+        log.info("[message Info] msg gid :{}, message type :{}", msg.getGId(), msg.getType());
     }
 }

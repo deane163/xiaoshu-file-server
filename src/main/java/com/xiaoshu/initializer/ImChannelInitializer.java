@@ -1,5 +1,6 @@
 package com.xiaoshu.initializer;
 
+import com.xiaoshu.handler.ClusterMessageHandler;
 import com.xiaoshu.handler.HeartBeatHandler;
 import com.xiaoshu.handler.MessageInfoHandler;
 import com.xiaoshu.im.MessageInfo;
@@ -43,6 +44,12 @@ public class ImChannelInitializer extends ChannelInitializer<SocketChannel> {
     private MessageInfoHandler messageInfoHandler;
 
     /**
+     * 集群中消息转发的业务处理实现类
+     */
+    @Autowired
+    private ClusterMessageHandler clusterMessageHandler;
+
+    /**
      * 初始化Channel，添加相应的业务逻辑 handler (构成 pipeline)
      *
      * @param ch
@@ -65,5 +72,7 @@ public class ImChannelInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(heartBeatHandler);
         // 添加文件转发的业务处理类
         pipeline.addLast(messageInfoHandler);
+        // 集群间消息转发的实现处理类
+        pipeline.addLast(clusterMessageHandler);
     }
 }
