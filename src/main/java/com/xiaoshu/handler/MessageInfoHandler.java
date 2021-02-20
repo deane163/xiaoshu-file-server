@@ -48,13 +48,21 @@ public class MessageInfoHandler extends SimpleChannelInboundHandler<MessageInfo.
     protected void channelRead0(ChannelHandlerContext ctx, MessageInfo.Message msg) throws Exception {
         // TODO 添加实际的业务逻辑，实现图片的透传操作；
         log.info("[Handler Message] handler with message :{}", msg);
-        if (msg.getType().equals(MessageInfo.Message.Type.FILE)) {
-            MessageInfo.File file = msg.getMessageContent().getContent().unpack(MessageInfo.File.class);
-            String clientId = file.getTo();
-            Channel clientChannel = channelRepository.get(clientId);
-            log.info("[发送消息到客户端]:{}", clientChannel.remoteAddress());
-            clientChannel.writeAndFlush(msg);
+        if (!channelRepository.isChannelExists(ctx.channel())) {
+            if (msg.getType().equals(MessageInfo.Message.Type.FILE)) {
+                MessageInfo.File file = msg.getMessageContent().getContent().unpack(MessageInfo.File.class);
+                String clientId = file.getTo();
+                Channel clientChannel = channelRepository.get(clientId);
+                log.info("[发送消息到客户端]:{}", clientChannel.remoteAddress());
+                clientChannel.writeAndFlush(msg);
+            }
+        } else {
+            // TODO （集群情况下）如果接收端在线，但是接收端没有在本节点，需要将数据转发到其它节点上；(手动处理)
+            ctx.fireChannelRead(msg);
         }
+
+
+
     }
 
     @Override
